@@ -67,7 +67,7 @@ html, body { min-height: 100%; }
 
 /* Match Ownd map block: .map__body { height: 400px } / SP square */
 .map {
-  max-width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .map__body {
@@ -99,15 +99,28 @@ html, body { min-height: 100%; }
 }
 
 /* Access page: large type for seniors / first-time visitors */
+/* Ownd hinata defaults .page__main to max-width:840px — widen so table text is not clipped */
 .access-page .page__main {
   font-size: 112%;
+  max-width: 1280px !important;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.access-page .grid,
+.access-page .block__inner,
+.access-page .block-txt {
+  max-width: none;
+  overflow: visible;
 }
 .access-guide {
-  max-width: 960px;
+  max-width: none;
+  width: 100%;
   margin: 0 auto;
   line-height: 1.9;
   font-size: 1.85rem;
   letter-spacing: 0.02em;
+  overflow: visible;
 }
 .access-guide a {
   color: #a33428;
@@ -187,11 +200,14 @@ html, body { min-height: 100%; }
 .access-table-wrap {
   width: 100%;
   overflow-x: auto;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
 }
 .access-table {
   width: 100%;
+  min-width: 980px;
   border-collapse: collapse;
+  table-layout: auto;
   background: #fff;
   font-size: 1.7rem;
   line-height: 1.7;
@@ -202,20 +218,23 @@ html, body { min-height: 100%; }
   border: 2px solid #ecd6d4;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
 }
 .access-table thead th {
   background: #a33428;
   color: #fff;
   font-weight: 700;
-  white-space: nowrap;
+  white-space: normal;
   font-size: 1.65rem;
   font-family: Helvetica, "Helvetica Neue", Arial, "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 .access-table tbody th {
   background: #f7f2ed;
   font-weight: 700;
-  white-space: nowrap;
-  width: 8.5em;
+  white-space: normal;
+  min-width: 7em;
   font-size: 1.7rem;
 }
 .access-table tbody tr:nth-child(even) td {
@@ -273,6 +292,9 @@ html, body { min-height: 100%; }
   font-weight: 700;
   white-space: nowrap;
 }
+.access-table--routes {
+  min-width: 1080px;
+}
 .access-table--routes th,
 .access-table--routes td {
   vertical-align: middle;
@@ -285,16 +307,21 @@ html, body { min-height: 100%; }
   font-size: 1.85rem;
   background: #f7f2ed;
   color: #a33428;
+  white-space: nowrap;
 }
-.access-table--routes .col-stand,
-.access-table--routes .col-bus,
+.access-table--routes .col-stand {
+  text-align: center;
+  white-space: nowrap;
+  min-width: 5.5em;
+}
+.access-table--routes .col-bus {
+  text-align: center;
+  min-width: 11em;
+}
 .access-table--routes .col-walk,
 .access-table--routes .col-time {
   text-align: center;
-  white-space: nowrap;
-}
-.access-table--routes .col-bus {
-  white-space: normal;
+  min-width: 6.5em;
 }
 .access-table--routes .col-bus .bus-num {
   margin: 0.12em;
@@ -312,13 +339,13 @@ html, body { min-height: 100%; }
     min-width: 2.1em;
     padding: 0.3em 0.45em;
   }
-  .access-table--routes {
-    min-width: 720px;
+  .access-page .page__main {
+    max-width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
-  .access-table--routes .col-stand,
-  .access-table--routes .col-walk,
-  .access-table--routes .col-time {
-    white-space: normal;
+  .access-table--routes {
+    min-width: 920px;
   }
 }
 .map {
@@ -351,7 +378,7 @@ html, body { min-height: 100%; }
   }
   .access-table {
     font-size: 1.55rem;
-    min-width: 640px;
+    min-width: 920px;
   }
   .access-table thead th {
     font-size: 1.5rem;
