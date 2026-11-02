@@ -1,0 +1,241 @@
+/**
+ * 携帯電話専用レイアウト
+ * - PCでは .mobile-only を隠す
+ * - スマホでは .desktop-only を隠し、カード型の案内を出す
+ */
+
+.mobile-only {
+  display: none !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .page,
+  .page__outer,
+  .page__inner,
+  .page__main {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .page__main {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .block-txt.txt {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 1.15rem 1rem !important;
+    border-width: 2px !important;
+  }
+
+  /* トップ */
+  .keyvisual__image {
+    min-height: 160px !important;
+    max-height: 220px !important;
+  }
+  .keyvisual__text {
+    padding: 1.2rem 1rem !important;
+  }
+  .keyvisual__title {
+    font-size: 2rem !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.35 !important;
+  }
+
+  /* アクセス：スマホ専用 */
+  .access-page .page__main {
+    font-size: 100% !important;
+    max-width: 100% !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+  .access-guide {
+    font-size: 1.55rem !important;
+    line-height: 1.75 !important;
+    letter-spacing: normal !important;
+    padding: 1rem 0.85rem !important;
+  }
+  .access-lead {
+    font-size: 1.6rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1em;
+  }
+  .access-heading {
+    font-size: 1.85rem !important;
+    line-height: 1.35 !important;
+  }
+  .access-panel {
+    padding: 1rem 0.75rem 1.15rem !important;
+    margin-bottom: 1.1em !important;
+  }
+  .access-toc {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .access-toc a {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 1.35rem !important;
+    padding: 0.8em 0.4em !important;
+    line-height: 1.3;
+  }
+  .bus-explain {
+    padding: 0.8em !important;
+  }
+  .bus-explain__item {
+    font-size: 1.4rem !important;
+    line-height: 1.55 !important;
+    align-items: flex-start;
+  }
+  .bus-stand,
+  .bus-num,
+  .bus-kind {
+    font-size: 1.3rem !important;
+    min-width: 1.9em;
+    padding: 0.22em 0.45em !important;
+  }
+  .access-note {
+    font-size: 1.4rem !important;
+    padding: 0.85em 0.8em !important;
+  }
+  .access-foot,
+  .access-hint {
+    font-size: 1.35rem !important;
+  }
+
+  /* ルート型ルート */
+  .m-route-list {
+    display: grid !important;
+    gap: 0.75rem;
+    margin: 0.2em 0 0.6em;
+  }
+  .m-route-card {
+    margin: 0;
+    padding: 0.9em 0.85em;
+    background: #fff;
+    border: 2px solid #ecd6d4;
+    border-radius: 4px;
+  }
+  .m-route-card__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35em 0.55em;
+    margin: 0 0 0.55em;
+    padding-bottom: 0.45em;
+    border-bottom: 1px solid #ecd6d4;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  .m-route-card__no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6em;
+    padding: 0.1em 0.35em;
+    background: #a33428;
+    color: #fff;
+    border-radius: 0.3em;
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  .m-route-card__row {
+    margin: 0.35em 0;
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+  .m-route-card__label {
+    display: inline-block;
+    min-width: 4.2em;
+    color: #7a2a22;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .m-route-card__bus {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35em;
+    margin: 0.45em 0;
+  }
+
+  /* 駐車場カード */
+  .m-park-list {
+    display: grid !important;
+    gap: 0.75rem;
+  }
+  .m-park-card {
+    margin: 0;
+    padding: 0.9em 0.85em;
+    background: #fff;
+    border: 2px solid #ecd6d4;
+    border-radius: 4px;
+  }
+  .m-park-card h3 {
+    margin: 0 0 0.45em !important;
+    font-size: 1.6rem !important;
+    line-height: 1.35 !important;
+  }
+  .m-park-card p {
+    margin: 0.35em 0;
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+  .m-park-card a {
+    display: inline-block;
+    margin-top: 0.45em;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  /* 電車・車もカードっぽく */
+  .m-simple-list {
+    display: grid !important;
+    gap: 0.65rem;
+  }
+  .m-simple-card {
+    margin: 0;
+    padding: 0.85em 0.8em;
+    background: #fff;
+    border: 2px solid #ecd6d4;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 1.55;
+  }
+  .m-simple-card strong {
+    display: block;
+    margin-bottom: 0.25em;
+    font-size: 1.5rem;
+  }
+
+  /* 出店・規約など本文 */
+  .carry-guide,
+  .carry-guide p {
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+  }
+  .carry-guide h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .map-panel {
+    padding: 0.45em !important;
+  }
+  .map-figure img {
+    width: 100%;
+    height: auto;
+  }
+}
