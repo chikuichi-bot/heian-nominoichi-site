@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="assets/ameba/css/hinata/index.min.css">
 <link rel="stylesheet" href="assets/local.css">
 <link rel="stylesheet" href="assets/mobile.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 </head>
 <body class="u-font access-page">
 <div class="page">
@@ -41,6 +41,15 @@
       <div class="block-type--map">
         <div class="map">
           <div class="map__body map__body--leaflet" id="access-map" role="img" aria-label="会場と降りるバス停の地図"></div>
+          <div class="map__body map__fallback" id="access-map-fallback" hidden>
+            <iframe
+              title="岡崎公園周辺のGoogleマップ"
+              src="https://maps.google.com/maps?q=35.0142667,135.7828559&amp;ll=35.0142667,135.7828559&amp;z=16&amp;hl=ja&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
           <p class="map__legend"><span class="map-pin map-pin--venue">会場</span> 岡崎公園　／　<span class="map-pin map-pin--stop">バス</span> 降りるバス停（タップで名前）</p>
           <a class="map__link u-lnk-clr txt txt--s u-font" href="https://www.google.com/maps?q=35.0142667,135.7828559&amp;ll=35.0142667,135.7828559&amp;z=16&amp;hl=ja" target="_blank" rel="noopener">Googleマップで開く（京都　岡崎公園）</a>
         </div>
@@ -521,7 +530,7 @@
     </div>
   </div>
 </div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZswnYlugsNOf69YJlkyAU4HG2VmY=" crossorigin=""></script>
-<script src="assets/access-map.js" defer></script>
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/access-map.js"></script>
 </body>
 </html>

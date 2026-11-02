@@ -1,6 +1,16 @@
 (function () {
   var el = document.getElementById("access-map");
-  if (!el || typeof L === "undefined") return;
+  var fallback = document.getElementById("access-map-fallback");
+
+  function showFallback() {
+    if (el) el.hidden = true;
+    if (fallback) fallback.hidden = false;
+  }
+
+  if (!el || typeof L === "undefined") {
+    showFallback();
+    return;
+  }
 
   var venue = {
     name: "会場 · 岡崎公園（平安神宮前）",
@@ -31,56 +41,64 @@
     }
   ];
 
-  var map = L.map(el, {
-    scrollWheelZoom: false,
-    attributionControl: true
-  });
-
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function icon(kind) {
-    var cls = kind === "venue" ? "map-pin map-pin--venue" : "map-pin map-pin--stop";
-    var label = kind === "venue" ? "会場" : "バス";
-    return L.divIcon({
-      className: "map-pin-wrap",
-      html: '<span class="' + cls + '">' + label + "</span>",
-      iconSize: [52, 28],
-      iconAnchor: [26, 28],
-      popupAnchor: [0, -24]
+  try {
+    var map = L.map(el, {
+      scrollWheelZoom: false,
+      attributionControl: true
     });
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    function icon(kind) {
+      var cls = kind === "venue" ? "map-pin map-pin--venue" : "map-pin map-pin--stop";
+      var label = kind === "venue" ? "会場" : "バス";
+      return L.divIcon({
+        className: "map-pin-wrap",
+        html: '<span class="' + cls + '">' + label + "</span>",
+        iconSize: [52, 28],
+        iconAnchor: [26, 28],
+        popupAnchor: [0, -24]
+      });
+    }
+
+    var bounds = [];
+
+    function addMarker(place, kind) {
+      var m = L.marker([place.lat, place.lng], { icon: icon(kind) }).addTo(map);
+      var gmaps =
+        "https://www.google.com/maps?q=" +
+        encodeURIComponent(place.lat + "," + place.lng) +
+        "&ll=" +
+        place.lat +
+        "," +
+        place.lng +
+        "&z=18&hl=ja";
+      m.bindPopup(
+        "<strong>" +
+          place.name +
+          "</strong><br><span lang=\"en\">" +
+          place.nameEn +
+          '</span><br><a href="' +
+          gmaps +
+          '" target="_blank" rel="noopener">Googleマップで開く</a>'
+      );
+      bounds.push([place.lat, place.lng]);
+    }
+
+    addMarker(venue, "venue");
+    stops.forEach(function (s) {
+      addMarker(s, "stop");
+    });
+
+    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 16 });
+    setTimeout(function () {
+      map.invalidateSize();
+    }, 100);
+  } catch (err) {
+    showFallback();
   }
-
-  var bounds = [];
-
-  function addMarker(place, kind) {
-    var m = L.marker([place.lat, place.lng], { icon: icon(kind) }).addTo(map);
-    var gmaps =
-      "https://www.google.com/maps?q=" +
-      encodeURIComponent(place.lat + "," + place.lng) +
-      "&ll=" +
-      place.lat +
-      "," +
-      place.lng +
-      "&z=18&hl=ja";
-    m.bindPopup(
-      "<strong>" +
-        place.name +
-        "</strong><br><span lang=\"en\">" +
-        place.nameEn +
-        '</span><br><a href="' +
-        gmaps +
-        '" target="_blank" rel="noopener">Googleマップで開く</a>'
-    );
-    bounds.push([place.lat, place.lng]);
-  }
-
-  addMarker(venue, "venue");
-  stops.forEach(function (s) {
-    addMarker(s, "stop");
-  });
-
-  map.fitBounds(bounds, { padding: [36, 36], maxZoom: 16 });
 })();
