@@ -1,0 +1,63 @@
+.u-nav-clr { color: #ffffff; }
+.u-nav-bdr-clr { border-color: #ffffff; }
+.u-nav-bg-clr { background-color: #a33428; }
+.u-nav-bg-bdr-clr { border-color: #a33428; }
+.u-site-clr { color: #a33428; }
+.u-base-bg-clr { background-color: #f7f2ed; }
+.u-btn-clr { color: #ffffff; }
+.u-btn-clr:hover, .u-btn-clr--active { color: rgba(255,255,255, 0.7); }
+.u-btn-bdr-clr { border-color: #a33428; }
+.u-btn-bg-clr { background-color: #a33428; }
+.u-btn-bg-clr:hover, .u-btn-bg-clr--active { background-color: rgba(163,52,40, 0.7); }
+.u-txt-clr { color: #a33428; }
+.u-txt-clr--lv1 { color: rgba(163,52,40, 0.7); }
+.u-txt-clr--lv2 { color: rgba(163,52,40, 0.5); }
+.u-txt-clr--lv3 { color: rgba(163,52,40, 0.3); }
+.u-txt-bg-clr { background-color: #f5eae9; }
+.u-lnk-clr, .u-clr-area a { color: #b3b3b3; }
+.u-lnk-clr:visited, .u-clr-area a:visited { color: rgba(179,179,179, 0.7); }
+.u-lnk-clr:hover, .u-clr-area a:hover { color: rgba(179,179,179, 0.5); }
+.u-ttl-blk-clr { color: #a33428; }
+.u-ttl-blk-bdr-clr { border-color: #a33428; }
+.u-ttl-blk-bdr-clr--lv1 { border-color: #ecd6d4; }
+.u-bdr-clr { border-color: #a33428; }
+.u-acnt-bdr-clr { border-color: #a33428; }
+.u-acnt-bg-clr { background-color: #a33428; }
+body { background-color: #f7f2ed; }
+blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
+.u-font { font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+
+/* Ownd rem base (same as user.min.css) */
+html { font-size: 62.5%; }
+
+html, body { min-height: 100%; }
+.page__outer, .page__inner { min-height: 100vh; }
+.common-header__nav { flex-wrap: wrap; }
+.common-header-nav__item a { white-space: nowrap; }
+.block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
+.btn__item { text-decoration: none; }
+
+.local-notice {
+  max-width: 960px; margin: 12px auto 0; padding: 10px 14px;
+  background: #fff; border: 1px solid #ecd6d4; color: #a33428;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.common-header__switch { display: none; }
+@media (max-width: 800px) {
+  .common-header__nav { display: none; }
+  .common-header__switch:checked ~ .common-header .common-header__nav {
+    display: block; position: absolute; left: 0; right: 0;
+    background: #a33428; padding: 12px; z-index: 20;
+  }
+  .common-header__nav .common-header-nav__item { display: block; margin: 8px 0; }
+}
+
+/* Tighten only empty-looking gaps; sizes come from Ownd .txt h1/h2/h3 */
+.page__main .block-txt h1,
+.page__main .block-txt h2,
+.page__main .block-txt h3 {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
