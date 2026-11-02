@@ -72,10 +72,14 @@ html, body { min-height: 100%; }
     width: 100% !important;
     margin: 0 !important;
     text-align: left !important;
+    line-height: normal !important;
+    overflow: visible !important;
   }
   .common-header__nav {
     display: none;
     line-height: 1.5 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
   .common-header__more {
     display: block !important;
@@ -119,22 +123,40 @@ html, body { min-height: 100%; }
     z-index: 45;
     text-align: left;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+    height: auto !important;
+    overflow: visible !important;
   }
+  /* Ownd 既定の height:49px / overflow:hidden で文字が欠けるのを解除 */
   .common-header__nav .common-header-nav__item {
-    display: block;
-    margin: 0;
-    padding: 0.55em 0;
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    height: auto !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+    padding: 0.7em 0 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    text-align: left !important;
+    vertical-align: top !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
   .common-header__nav .common-header-nav__item:last-child {
     border-bottom: none;
   }
+  .common-header-nav__item > a,
   .common-header-nav__item a {
-    display: block;
-    white-space: normal;
-    font-size: 1.7rem;
-    line-height: 1.4;
-    padding: 0.15em 0;
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: 1.7rem !important;
+    line-height: 1.45 !important;
+    padding: 0 !important;
   }
 }
 
