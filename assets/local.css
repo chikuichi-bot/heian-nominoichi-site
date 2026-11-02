@@ -48,13 +48,6 @@ html, body { min-height: 100%; }
 .block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
 .btn__item { text-decoration: none; }
 
-.local-notice {
-  max-width: 960px; margin: 12px auto 0; padding: 10px 14px;
-  background: #fff; border: 1px solid #ecd6d4; color: #a33428;
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-
 .common-header__switch { display: none; }
 @media (max-width: 800px) {
   .common-header__nav { display: none; }
