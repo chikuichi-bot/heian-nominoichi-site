@@ -229,43 +229,25 @@ html, body { min-height: 100%; }
 }
 
 /* Bus stand / route number badges */
-.bus-line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35em 0.45em;
-  margin: 0.25em 0;
-  line-height: 1.4;
-}
-.bus-or {
-  margin: 0.45em 0;
-  font-weight: 700;
-  color: #7a2a22;
-}
-.bus-label {
-  font-size: 1.35rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
 .bus-legend {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35em 0.55em;
-  margin-top: 0.55em;
+  gap: 0.4em 0.7em;
+  margin-top: 0.6em;
 }
 .bus-stand,
 .bus-num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.2em;
-  padding: 0.28em 0.55em;
+  min-width: 2.4em;
+  padding: 0.32em 0.55em;
   border-radius: 0.35em;
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
-  font-size: 1.85rem;
-  line-height: 1.15;
+  font-size: 1.9rem;
+  line-height: 1.1;
   letter-spacing: 0.02em;
 }
 .bus-stand {
@@ -273,20 +255,70 @@ html, body { min-height: 100%; }
   color: #fff;
   border: 2px solid #16375a;
 }
+.bus-stand.muted {
+  background: #d8d0c8;
+  border-color: #c4bbb2;
+  color: #666;
+  font-weight: 700;
+  min-width: 2em;
+}
 .bus-num {
   background: #a33428;
   color: #fff;
   border: 2px solid #7a2a22;
 }
+.bus-kind {
+  display: inline-block;
+  margin-right: 0.15em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.access-table--routes th,
+.access-table--routes td {
+  vertical-align: middle;
+}
+.access-table--routes .col-no {
+  width: 3.2em;
+  text-align: center;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.85rem;
+  background: #f7f2ed;
+  color: #a33428;
+}
+.access-table--routes .col-stand,
+.access-table--routes .col-bus,
+.access-table--routes .col-walk,
+.access-table--routes .col-time {
+  text-align: center;
+  white-space: nowrap;
+}
+.access-table--routes .col-bus {
+  white-space: normal;
+}
+.access-table--routes .col-bus .bus-num {
+  margin: 0.12em;
+}
+.access-foot {
+  margin: 0.9em 0 0;
+  font-size: 1.55rem;
+  line-height: 1.6;
+  color: #7a2a22;
+}
 @media only screen and (max-width: 800px) {
   .bus-stand,
   .bus-num {
-    font-size: 1.75rem;
-    min-width: 2em;
-    padding: 0.32em 0.5em;
+    font-size: 1.7rem;
+    min-width: 2.1em;
+    padding: 0.3em 0.45em;
   }
-  .bus-label {
-    font-size: 1.3rem;
+  .access-table--routes {
+    min-width: 720px;
+  }
+  .access-table--routes .col-stand,
+  .access-table--routes .col-walk,
+  .access-table--routes .col-time {
+    white-space: normal;
   }
 }
 .map {
