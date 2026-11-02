@@ -41,23 +41,8 @@ blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
 /* Ownd rem base (same as user.min.css) */
 html { font-size: 62.5%; }
 
-html, body {
-  min-height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-.page,
-.page__outer,
-.page__inner,
-.page__main {
-  max-width: 100%;
-  box-sizing: border-box;
-}
+html, body { min-height: 100%; }
 .page__outer, .page__inner { min-height: 100vh; }
-.block-txt.txt {
-  box-sizing: border-box;
-  max-width: 100%;
-}
 .common-header__nav { flex-wrap: wrap; }
 .common-header-nav__item a { white-space: nowrap; }
 .block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
@@ -645,134 +630,108 @@ html, body {
   padding: 0.55em 0;
 }
 
-/* ========== スマホ見やすさ（800px以下） ========== */
+/*
+ * SP: Ameba Ownd に近い標準表示へ戻す
+ * （PC向けに大きくした Access の拡大指定をスマホでは打ち消す）
+ * メニュー ≡ の操作だけは維持
+ */
 @media only screen and (max-width: 800px) {
-  .page__main {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  .block-txt.txt {
-    padding: 1.4rem 1.1rem !important;
-    border-width: 2px !important;
-  }
-  .keyvisual__image {
-    min-height: 180px !important;
-    max-height: 240px !important;
-  }
-  .keyvisual__text {
-    padding: 22px 14px !important;
-  }
-  .keyvisual__title {
-    font-size: 2.2rem !important;
-    letter-spacing: 0.05em !important;
-    line-height: 1.35 !important;
-  }
-
-  .bus-stand,
-  .bus-num {
-    font-size: 1.55rem;
-    min-width: 2em;
-    padding: 0.28em 0.42em;
-  }
-
   .access-page .page__main {
-    max-width: 100% !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    font-size: 100% !important;
+    max-width: none !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .access-guide {
-    font-size: 1.65rem;
-    line-height: 1.85;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 1.2rem 0.95rem !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: normal !important;
   }
   .access-lead {
-    font-size: 1.7rem;
-    line-height: 1.75;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    margin-bottom: 1em;
   }
   .access-heading {
-    font-size: 1.95rem !important;
+    font-size: 1.8rem !important;
+    line-height: 1.4 !important;
   }
   .access-panel {
-    padding: 1rem 0.7rem 1.15rem;
-    margin-bottom: 1.25em;
+    padding: 1.2em 1em 1.3em;
+    margin-bottom: 1.2em;
   }
   .access-toc {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.55rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   .access-toc a {
-    box-sizing: border-box;
-    width: 100%;
-    text-align: center;
-    font-size: 1.4rem;
-    padding: 0.85em 0.45em;
-    line-height: 1.35;
+    font-size: 1.3rem;
+    padding: 0.55em 0.75em;
   }
   .bus-explain {
-    padding: 0.85em 0.8em;
+    padding: 0.85em 0.9em;
   }
   .bus-explain__item {
-    font-size: 1.45rem;
-    align-items: flex-start;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  .bus-stand,
+  .bus-num,
+  .bus-kind {
+    font-size: 1.25rem;
+    min-width: 1.8em;
+    padding: 0.2em 0.4em;
   }
   .access-table-wrap {
-    max-width: 100%;
-    margin: 0;
-    border: 1px solid #ecd6d4;
-    background: #fff;
-  }
-  .access-table-wrap::after {
-    content: "← 表は横にスクロールできます →";
-    display: block;
-    text-align: center;
-    font-size: 1.3rem;
-    color: #7a2a22;
-    padding: 0.5em 0.4em 0.35em;
-    background: #f7f2ed;
-    border-top: 1px solid #ecd6d4;
-  }
-  .access-guide--en .access-table-wrap::after {
-    content: "← Swipe sideways to see the full table →";
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .access-table,
   .access-table--routes {
-    font-size: 1.4rem;
-    min-width: 640px;
+    font-size: 1.25rem;
+    min-width: 0;
+    width: 100%;
+  }
+  .access-table--routes {
+    min-width: 36em;
   }
   .access-table th,
   .access-table td {
-    padding: 0.75em 0.65em;
+    padding: 0.65em 0.55em;
   }
   .access-table thead th {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
   .access-table tbody th {
+    font-size: 1.25rem;
+    min-width: 0;
     white-space: normal;
-    width: auto;
-    min-width: 5em;
   }
-  .access-table--routes .col-no {
-    font-size: 1.5rem;
-  }
+  .access-table--routes .col-no,
   .access-table--routes .col-from,
   .access-table--routes .col-stand,
   .access-table--routes .col-bus,
   .access-table--routes .col-walk,
   .access-table--routes .col-time {
     min-width: 0;
+    font-size: inherit;
   }
   .access-note {
-    font-size: 1.5rem;
-    padding: 0.9em 0.85em;
+    font-size: 1.3rem;
+    padding: 0.85em 0.9em;
   }
   .access-foot {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
   }
-
-  .map-panel {
-    padding: 0.55em !important;
+  .carry-guide,
+  .carry-guide p {
+    font-size: 1.35rem;
+    line-height: 1.75;
+  }
+  .carry-guide h1 {
+    font-size: 1.8rem !important;
   }
 }
