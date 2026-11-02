@@ -218,18 +218,65 @@ html, body { min-height: 100%; }
   height: 100%;
   border: 0;
 }
+.map__body--leaflet {
+  z-index: 0;
+  border: 2px solid #ecd6d4;
+  border-radius: 2px;
+}
+.map__legend {
+  margin: 0.65em 0 0;
+  font-size: 1.45rem;
+  line-height: 1.55;
+  color: #5c1c17;
+}
+.map__legend .map-pin {
+  vertical-align: middle;
+}
+.map-pin-wrap {
+  background: transparent;
+  border: 0;
+}
+.map-pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6em;
+  padding: 0.2em 0.45em;
+  border: 2px solid #a33428;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+.map-pin--venue {
+  background: #a33428;
+  color: #fff;
+}
+.map-pin--stop {
+  background: #fffdfb;
+  color: #a33428;
+}
 .map__link {
   display: inline-block;
   margin-top: 10px;
 }
 @media only screen and (max-width: 800px) {
-  .map__body {
+  .map__body:not(.map__body--leaflet) {
     height: auto;
   }
-  .map__body::after {
+  .map__body:not(.map__body--leaflet)::after {
     content: '';
     display: block;
     padding-top: 100%;
+  }
+  .map__body--leaflet {
+    height: min(72vw, 420px);
+    min-height: 280px;
+  }
+  .map__legend {
+    font-size: 1.35rem;
   }
 }
 
