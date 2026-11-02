@@ -597,6 +597,9 @@ a.bus-stop:hover {
   background: #f7f2ed;
   min-width: 7.5em;
   line-height: 1.45;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #5c1c17;
 }
 .access-table--routes .col-stand {
   text-align: center;

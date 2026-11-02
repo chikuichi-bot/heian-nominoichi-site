@@ -138,9 +138,10 @@
     margin: 0 0 0.55em;
     padding-bottom: 0.45em;
     border-bottom: 1px solid #ecd6d4;
-    font-size: 1.55rem;
-    font-weight: 700;
+    font-size: 1.95rem !important;
+    font-weight: 800 !important;
     line-height: 1.35;
+    color: #5c1c17;
   }
   .m-route-card__no {
     display: inline-flex;
