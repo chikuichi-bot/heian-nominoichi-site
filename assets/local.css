@@ -227,6 +227,68 @@ html, body { min-height: 100%; }
 .access-guide--en .access-table {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
+
+/* Bus stand / route number badges */
+.bus-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35em 0.45em;
+  margin: 0.25em 0;
+  line-height: 1.4;
+}
+.bus-or {
+  margin: 0.45em 0;
+  font-weight: 700;
+  color: #7a2a22;
+}
+.bus-label {
+  font-size: 1.35rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.bus-legend {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35em 0.55em;
+  margin-top: 0.55em;
+}
+.bus-stand,
+.bus-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  padding: 0.28em 0.55em;
+  border-radius: 0.35em;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+.bus-stand {
+  background: #1f4b7a;
+  color: #fff;
+  border: 2px solid #16375a;
+}
+.bus-num {
+  background: #a33428;
+  color: #fff;
+  border: 2px solid #7a2a22;
+}
+@media only screen and (max-width: 800px) {
+  .bus-stand,
+  .bus-num {
+    font-size: 1.75rem;
+    min-width: 2em;
+    padding: 0.32em 0.5em;
+  }
+  .bus-label {
+    font-size: 1.3rem;
+  }
+}
 .map {
   margin-bottom: 12px;
 }
