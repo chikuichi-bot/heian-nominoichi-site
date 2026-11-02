@@ -66,8 +66,10 @@
     padding: 1rem 0.85rem !important;
   }
   .access-lead {
-    font-size: 1.6rem !important;
-    line-height: 1.7 !important;
+    font-size: 2.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    color: #5c1c17;
     margin-bottom: 1em;
   }
   .access-heading {

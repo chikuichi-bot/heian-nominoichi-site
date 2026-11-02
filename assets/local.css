@@ -271,8 +271,10 @@ html, body { min-height: 100%; }
 }
 .access-lead {
   margin: 0 0 1.2em;
-  font-size: 1.95rem;
-  line-height: 1.85;
+  font-size: 2.55rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #5c1c17;
 }
 .access-hint {
   margin: 0 0 1em;
@@ -668,8 +670,10 @@ html, body { min-height: 100%; }
     letter-spacing: normal !important;
   }
   .access-lead {
-    font-size: inherit !important;
-    line-height: inherit !important;
+    font-size: 2.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    color: #5c1c17;
     margin-bottom: 1em;
   }
   .access-heading {
