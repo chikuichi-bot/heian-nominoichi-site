@@ -17,6 +17,14 @@
 .u-lnk-clr, .u-clr-area a { color: #b3b3b3; }
 .u-lnk-clr:visited, .u-clr-area a:visited { color: rgba(179,179,179, 0.7); }
 .u-lnk-clr:hover, .u-clr-area a:hover { color: rgba(179,179,179, 0.5); }
+/* HOME / 規約の Instagram・X：本文色のままタップできると分かるように */
+.block-txt a.u-lnk-clr {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.block-txt a.u-lnk-clr:visited { color: inherit; }
+.block-txt a.u-lnk-clr:hover { color: inherit; opacity: 0.75; }
 .u-ttl-blk-clr { color: #a33428; }
 .u-ttl-blk-bdr-clr { border-color: #a33428; }
 .u-ttl-blk-bdr-clr--lv1 { border-color: #ecd6d4; }
