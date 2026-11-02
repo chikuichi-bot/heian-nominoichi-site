@@ -25,7 +25,10 @@
 .u-acnt-bg-clr { background-color: #a33428; }
 body { background-color: #f7f2ed; }
 blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
-.u-font { font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+/* Latin → Helvetica; Japanese glyphs fall through to Mincho */
+.u-font {
+  font-family: Helvetica, "Helvetica Neue", Arial, "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", serif;
+}
 
 /* Ownd rem base (same as user.min.css) */
 html { font-size: 62.5%; }
