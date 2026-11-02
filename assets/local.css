@@ -66,6 +66,38 @@ html, body { min-height: 100%; }
   margin-bottom: 0.4em;
 }
 
+/* 搬入搬出ガイド: 読みやすさ優先で一段大きく */
+.carry-guide {
+  font-size: 1.9rem;
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+}
+.carry-guide h1 {
+  font-size: 2.4rem !important;
+  line-height: 1.45 !important;
+  margin: 0 0 0.75em !important;
+}
+.carry-guide p {
+  margin: 0 0 0.95em;
+  font-size: 1.9rem;
+  line-height: 1.95;
+}
+.carry-guide p:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 800px) {
+  .carry-guide {
+    font-size: 1.8rem;
+  }
+  .carry-guide h1 {
+    font-size: 2.15rem !important;
+  }
+  .carry-guide p {
+    font-size: 1.8rem;
+    line-height: 1.9;
+  }
+}
+
 /* Match Ownd map block: .map__body { height: 400px } / SP square */
 .map {
   max-width: 1280px;
