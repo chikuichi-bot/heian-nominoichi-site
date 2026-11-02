@@ -175,10 +175,13 @@ html, body { min-height: 100%; }
   border-top-color: #a33428;
   background: #fffdfb;
 }
-.map-panel {
-  border: 3px solid #a33428;
-  border-top-width: 4px;
-  padding: 1.2em 1.2em 1.4em;
+/* 会場マップ: 外側 .txt の赤枠だけにする（二重にしない） */
+.map-panel.access-panel {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: none;
+  background: transparent;
 }
 .map-figure {
   margin: 0;
