@@ -201,8 +201,10 @@
           <section class="access-panel" id="access-parking">
             <h2 class="access-heading">近くの駐車場</h2>
             <p class="access-hint">会場周辺の主な駐車場です。どちらも有料です。</p>
-            <div class="access-note">
-              <p>みやこめっせは、<strong>土・日・祝は「上限料金なし」</strong>（止めた時間だけ料金がかかります）。ご注意ください。</p>
+            <div class="access-note access-note--alert" role="note">
+              <p class="access-note__label">ご注意 · 上限料金</p>
+              <p>みやこめっせ駐車場は、<strong>土・日・祝は上限料金なし</strong>です。<br>止めた時間だけ料金がかかり、長く止めるほど高くなります。</p>
+              <p class="access-note__contrast">岡崎公園の地下駐車場は、土日祝も上限あり（24時間 1,800円）です。</p>
             </div>
             <div class="access-table-wrap">
               <table class="access-table">
@@ -213,13 +215,13 @@
                   <tr>
                     <th scope="row">岡崎公園<br>地下駐車場</th>
                     <td>約500台</td>
-                    <td>月〜金：24時間 <strong>1,200円</strong><br>土日祝：24時間 <strong>1,800円</strong></td>
+                    <td>月〜金：24時間 <strong>1,200円</strong><br>土日祝：24時間 <strong>1,800円</strong><br><span class="fee-cap-yes">上限あり</span></td>
                     <td><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">空きを見る</a></td>
                   </tr>
                   <tr>
                     <th scope="row">みやこめっせ<br>駐車場</th>
                     <td>約163台</td>
-                    <td>平日：上限 <strong>1,500円</strong><br>土日祝：<strong>上限なし</strong></td>
+                    <td>平日：上限 <strong>1,500円</strong><br>土日祝：<span class="fee-cap-none">上限なし</span><br><span class="fee-cap-none-note">時間課金のみ · 上限なし</span></td>
                     <td><a href="https://www.miyakomesse.jp/access/parking/" target="_blank" rel="noopener">くわしく</a></td>
                   </tr>
                 </tbody>
@@ -380,8 +382,10 @@
           <section class="access-panel" id="access-en-parking">
             <h3 class="access-heading">Parking nearby</h3>
             <p class="access-hint">Main paid lots near the venue.</p>
-            <div class="access-note">
-              <p>Miyako Messe has <strong>no daily maximum on Sat/Sun/holidays</strong> (you pay by time). Please take care.</p>
+            <div class="access-note access-note--alert" role="note">
+              <p class="access-note__label">Note · Daily max fee</p>
+              <p>Miyako Messe parking has <strong>no daily maximum on Sat/Sun/holidays</strong>.<br>You pay by time — the longer you stay, the higher the fee.</p>
+              <p class="access-note__contrast">Okazaki Park underground still has a daily max on weekends/holidays (1,800 yen / 24h).</p>
             </div>
             <div class="access-table-wrap">
               <table class="access-table">
@@ -392,13 +396,13 @@
                   <tr>
                     <th scope="row">Municipal<br>Okazaki Park</th>
                     <td>~500</td>
-                    <td>Mon–Fri: <strong>1,200 yen</strong> / 24h<br>Sat/Sun/holidays: <strong>1,800 yen</strong> / 24h</td>
+                    <td>Mon–Fri: <strong>1,200 yen</strong> / 24h<br>Sat/Sun/holidays: <strong>1,800 yen</strong> / 24h<br><span class="fee-cap-yes">Daily max applies</span></td>
                     <td><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">Availability</a></td>
                   </tr>
                   <tr>
                     <th scope="row">Miyako Messe</th>
                     <td>~163</td>
-                    <td>Weekdays: max <strong>1,500 yen</strong><br>Weekends/holidays: <strong>no max</strong></td>
+                    <td>Weekdays: max <strong>1,500 yen</strong><br>Weekends/holidays: <span class="fee-cap-none">No max</span><br><span class="fee-cap-none-note">Time-based only · no daily max</span></td>
                     <td><a href="https://www.miyakomesse.jp/english/access/" target="_blank" rel="noopener">Details</a></td>
                   </tr>
                 </tbody>
