@@ -356,6 +356,13 @@ html, body { min-height: 100%; }
   color: #a33428;
   white-space: nowrap;
 }
+.access-table--routes .col-from {
+  text-align: center;
+  vertical-align: middle !important;
+  background: #f7f2ed;
+  min-width: 7.5em;
+  line-height: 1.45;
+}
 .access-table--routes .col-stand {
   text-align: center;
   white-space: nowrap;
@@ -368,10 +375,33 @@ html, body { min-height: 100%; }
 .access-table--routes .col-walk,
 .access-table--routes .col-time {
   text-align: center;
-  min-width: 6.5em;
+  min-width: 7em;
+  vertical-align: middle !important;
+  line-height: 1.55;
+  overflow: visible;
+}
+.access-table--routes .col-time {
+  min-width: 7.5em;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+.access-table--routes .time-stack {
+  display: inline-block;
+  line-height: 1.55;
 }
 .access-table--routes .col-bus .bus-num {
   margin: 0.12em;
+}
+.access-table--routes tr.route-group-start td,
+.access-table--routes tr.route-group-start th {
+  border-top-width: 3px;
+  border-top-color: #d4b4b0;
+}
+.access-table--routes tbody tr:nth-child(even) td {
+  background: #fff;
+}
+.access-table--routes tbody tr:nth-child(odd) td {
+  background: #fffdfb;
 }
 .access-foot {
   margin: 0.9em 0 0;
