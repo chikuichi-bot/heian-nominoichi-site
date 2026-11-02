@@ -169,7 +169,15 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 0.35em;
-    margin: 0.45em 0;
+    margin: 0.35em 0 0.25em;
+  }
+  .m-route-card__option {
+    margin: 0 0 0.65em;
+    padding: 0 0 0.55em;
+    border-bottom: 1px dashed #ecd6d4;
+  }
+  .m-route-card__option:last-of-type {
+    margin-bottom: 0.35em;
   }
 
   /* 駐車場カード */

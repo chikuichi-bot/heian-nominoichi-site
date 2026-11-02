@@ -69,19 +69,6 @@
 
           <section class="access-panel access-panel--focus" id="access-recommend">
             <h2 class="access-heading">バスで来る場合</h2>
-            <div class="bus-explain">
-              <div class="bus-explain__item">
-                <span class="bus-kind bus-kind--city">市バス</span>
-                <span>ふつうの<strong>京都市バス</strong>（市内を広く走る）</span>
-              </div>
-              <div class="bus-explain__item">
-                <span class="bus-kind bus-kind--raku">洛バス</span>
-                <span>観光向けの市バス（京都駅〜観光地をわかりやすく結ぶ）。料金は市バスと同じことが多いです。</span>
-              </div>
-              <div class="bus-explain__item bus-explain__item--meta">
-                <span class="bus-stand">A2</span>＝乗り場　／　番号の色も種類に合わせています
-              </div>
-            </div>
             <div class="access-table-wrap desktop-only">
               <table class="access-table access-table--routes">
                 <thead>
@@ -147,44 +134,43 @@
             </div>
             <div class="m-route-list mobile-only">
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">1</span> 京都駅</p>
-                <div class="m-route-card__bus"><span class="bus-stand">A2</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">5</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
+                <p class="m-route-card__head">京都駅</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">A2</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">5</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">D1</span><span class="bus-kind bus-kind--raku">洛バス</span><span class="bus-num bus-num--raku">100</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
+                </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
                 <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約30分 · <strong>230円</strong></p>
               </article>
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">2</span> 京都駅</p>
-                <div class="m-route-card__bus"><span class="bus-stand">D1</span><span class="bus-kind bus-kind--raku">洛バス</span><span class="bus-num bus-num--raku">100</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約30分 · <strong>230円</strong></p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">3</span> 阪急 京都河原町</p>
-                <div class="m-route-card__bus"><span class="bus-stand">H</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">5</span><span class="bus-num bus-num--city">32</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前、またはロームシアター・みやこめっせ前</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約10〜15分</p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">4</span> 阪急 京都河原町</p>
-                <div class="m-route-card__bus"><span class="bus-stand">E</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">46</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　ロームシアター・みやこめっせ前</p>
+                <p class="m-route-card__head">阪急 京都河原町</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">H</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">5</span><span class="bus-num bus-num--city">32</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前、またはロームシアター・みやこめっせ前</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">E</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">46</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　ロームシアター・みやこめっせ前</p>
+                </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
                 <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約10〜15分</p>
               </article>
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">5</span> 祇園・清水寺あたり</p>
-                <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">201</span><span class="bus-num bus-num--city">203</span><span class="bus-num bus-num--city">206</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>東山二条</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>東へ約5分</p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">6</span> 祇園・清水寺あたり</p>
-                <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--raku">洛バス</span><span class="bus-num bus-num--raku">100</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
+                <p class="m-route-card__head">祇園・清水寺あたり</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--city">市バス</span><span class="bus-num bus-num--city">201</span><span class="bus-num bus-num--city">203</span><span class="bus-num bus-num--city">206</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>東山二条</p>
+                  <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>東へ約5分</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--raku">洛バス</span><span class="bus-num bus-num--raku">100</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span>岡崎公園　美術館・平安神宮前</p>
+                  <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>北へ約5分</p>
+                </div>
               </article>
             </div>
             <p class="access-foot">京都駅のバスは、だいたい1時間に8本あります。</p>
@@ -314,19 +300,6 @@
 
           <section class="access-panel access-panel--focus" id="access-en-recommend">
             <h3 class="access-heading">By bus</h3>
-            <div class="bus-explain">
-              <div class="bus-explain__item">
-                <span class="bus-kind bus-kind--city">City Bus</span>
-                <span>Regular <strong>Kyoto City Bus</strong></span>
-              </div>
-              <div class="bus-explain__item">
-                <span class="bus-kind bus-kind--raku">Raku Bus</span>
-                <span>Tourist-oriented Kyoto City Bus routes (easy links from Kyoto Station to sightseeing spots). Fare is usually the same as City Bus.</span>
-              </div>
-              <div class="bus-explain__item bus-explain__item--meta">
-                <span class="bus-stand">A2</span> = bus stand　/　number badge color matches the bus type
-              </div>
-            </div>
             <div class="access-table-wrap desktop-only">
               <table class="access-table access-table--routes">
                 <thead>
@@ -392,44 +365,43 @@
             </div>
             <div class="m-route-list mobile-only">
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">1</span> Kyoto Station</p>
-                <div class="m-route-card__bus"><span class="bus-stand">A2</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">5</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
+                <p class="m-route-card__head">Kyoto Station</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">A2</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">5</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">D1</span><span class="bus-kind bus-kind--raku">Raku Bus</span><span class="bus-num bus-num--raku">100</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
+                </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
                 <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~30 min · <strong>230 yen</strong></p>
               </article>
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">2</span> Kyoto Station</p>
-                <div class="m-route-card__bus"><span class="bus-stand">D1</span><span class="bus-kind bus-kind--raku">Raku Bus</span><span class="bus-num bus-num--raku">100</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~30 min · <strong>230 yen</strong></p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">3</span> Hankyu Kyoto-Kawaramachi</p>
-                <div class="m-route-card__bus"><span class="bus-stand">H</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">5</span><span class="bus-num bus-num--city">32</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Bijutsukan, Heian Jingu-mae or Rohm / Miyakomesse-mae</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~10–15 min</p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">4</span> Hankyu Kyoto-Kawaramachi</p>
-                <div class="m-route-card__bus"><span class="bus-stand">E</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">46</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Rohm Theatre / Miyakomesse-mae</p>
+                <p class="m-route-card__head">Hankyu Kyoto-Kawaramachi</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">H</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">5</span><span class="bus-num bus-num--city">32</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Bijutsukan, Heian Jingu-mae or Rohm / Miyakomesse-mae</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand">E</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">46</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Rohm Theatre / Miyakomesse-mae</p>
+                </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
                 <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~10–15 min</p>
               </article>
               <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">5</span> Gion / Kiyomizu area</p>
-                <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">201</span><span class="bus-num bus-num--city">203</span><span class="bus-num bus-num--city">206</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Higashiyama Nijo</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>East ~5 min</p>
-              </article>
-              <article class="m-route-card">
-                <p class="m-route-card__head"><span class="m-route-card__no">6</span> Gion / Kiyomizu area</p>
-                <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--raku">Raku Bus</span><span class="bus-num bus-num--raku">100</span></div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
+                <p class="m-route-card__head">Gion / Kiyomizu area</p>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--city">City Bus</span><span class="bus-num bus-num--city">201</span><span class="bus-num bus-num--city">203</span><span class="bus-num bus-num--city">206</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Higashiyama Nijo</p>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>East ~5 min</p>
+                </div>
+                <div class="m-route-card__option">
+                  <div class="m-route-card__bus"><span class="bus-stand muted">—</span><span class="bus-kind bus-kind--raku">Raku Bus</span><span class="bus-num bus-num--raku">100</span></div>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span>Okazaki Koen / Bijutsukan, Heian Jingu-mae</p>
+                  <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~5 min</p>
+                </div>
               </article>
             </div>
             <p class="access-foot">From Kyoto Station, about eight buses leave each hour.</p>
