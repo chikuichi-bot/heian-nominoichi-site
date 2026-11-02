@@ -69,53 +69,118 @@
 
           <section class="access-panel access-panel--focus" id="access-recommend">
             <h2 class="access-heading">おすすめの行き方</h2>
-            <article class="access-route">
-              <h3 class="access-route__title"><span class="access-num">1</span>京都駅から</h3>
-              <p class="access-route__body">市バス<strong>5</strong>系統（A2乗り場）または洛バス<strong>100</strong>号系統（D1乗り場）→「<strong>岡崎公園　美術館・平安神宮前</strong>」下車→北へ徒歩約5分</p>
-              <p class="access-meta"><span>約30分</span><span>230円</span></p>
-            </article>
-            <article class="access-route">
-              <h3 class="access-route__title"><span class="access-num">2</span>阪急「京都河原町」から</h3>
-              <p class="access-route__body">市バス<strong>5・32・46</strong>系統→「<strong>岡崎公園　美術館・平安神宮前</strong>」または「<strong>岡崎公園　ロームシアター京都・みやこめっせ前</strong>」下車→北へ徒歩約5分</p>
-              <p class="access-meta"><span>バス約10〜15分</span></p>
-            </article>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">出発</th><th scope="col">乗り方</th><th scope="col">バス停</th><th scope="col">徒歩</th><th scope="col">目安</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">京都駅</th>
+                    <td>市バス5（A2）／洛バス100（D1）</td>
+                    <td>岡崎公園　美術館・平安神宮前</td>
+                    <td>北へ約5分</td>
+                    <td>約30分・230円</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">阪急 京都河原町</th>
+                    <td>市バス5・32・46</td>
+                    <td>美術館・平安神宮前<br>または ロームシアター・みやこめっせ前</td>
+                    <td>北へ約5分</td>
+                    <td>バス約10〜15分</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-bus">
             <h2 class="access-heading">バスでお越しの場合</h2>
-            <div class="access-sub">
-              <h3>JR「京都駅」→ 平安神宮へ</h3>
-              <ul class="access-list">
-                <li>A2乗り場　市バス5系統</li>
-                <li>D1乗り場　洛バス100号系統</li>
-              </ul>
-              <p>「<strong>岡崎公園　美術館・平安神宮前</strong>」下車　北へ徒歩5分<br>京都駅より230円（約30分）、1時間に8本ほどあります。</p>
-            </div>
-            <div class="access-sub">
-              <h3>阪急「京都河原町駅」→ 平安神宮へ</h3>
-              <p>市バス5・46・32系統<br>「<strong>岡崎公園　美術館・平安神宮前</strong>」または「<strong>岡崎公園　ロームシアター京都・みやこめっせ前</strong>」下車　北へ徒歩5分</p>
-            </div>
-            <div class="access-sub">
-              <h3>祇園・清水寺方面 → 平安神宮へ</h3>
-              <ul class="access-list">
-                <li>市バス201・203・206系統「<strong>東山二条</strong>」下車　東へ徒歩5分</li>
-                <li>洛バス100号系統「<strong>岡崎公園　美術館・平安神宮前</strong>」下車　北へ徒歩5分</li>
-              </ul>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">出発地</th><th scope="col">系統・乗り場</th><th scope="col">下車バス停</th><th scope="col">徒歩</th><th scope="col">備考</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">JR京都駅</th>
+                    <td>A2：市バス5<br>D1：洛バス100</td>
+                    <td>岡崎公園　美術館・平安神宮前</td>
+                    <td>北へ5分</td>
+                    <td>230円・約30分<br>1時間に約8本</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">阪急京都河原町</th>
+                    <td>市バス5・46・32</td>
+                    <td>美術館・平安神宮前<br>または ロームシアター・みやこめっせ前</td>
+                    <td>北へ5分</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">祇園・清水寺方面</th>
+                    <td>市バス201・203・206</td>
+                    <td>東山二条</td>
+                    <td>東へ5分</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">祇園・清水寺方面</th>
+                    <td>洛バス100</td>
+                    <td>岡崎公園　美術館・平安神宮前</td>
+                    <td>北へ5分</td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
           <section class="access-panel" id="access-train">
             <h2 class="access-heading">電車でお越しの場合</h2>
-            <ul class="access-list">
-              <li>地下鉄東西線「<strong>東山駅</strong>」下車、徒歩約10分</li>
-              <li>京阪鴨東線「<strong>三条駅</strong>」「<strong>神宮丸太町駅</strong>」下車、徒歩約15分</li>
-            </ul>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">路線</th><th scope="col">駅</th><th scope="col">徒歩</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">地下鉄東西線</th>
+                    <td>東山駅</td>
+                    <td>約10分</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">京阪鴨東線</th>
+                    <td>三条駅／神宮丸太町駅</td>
+                    <td>約15分</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-car">
             <h2 class="access-heading">車でお越しの場合</h2>
-            <p>名神高速道路「京都東インター」より、三条通を西へ進み、「神宮道」交差点を北へ右折すぐ（東インターより約20分）。</p>
-            <p>平安神宮境内に駐車場はありません。近隣の有料駐車場をご利用ください（混雑しやすいため、公共交通を推奨します）。</p>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">項目</th><th scope="col">内容</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">ルート</th>
+                    <td>名神「京都東IC」→三条通を西へ→「神宮道」交差点を北へ右折すぐ（ICより約20分）</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">境内駐車場</th>
+                    <td>なし（近隣の有料駐車場をご利用ください）</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">注意</th>
+                    <td>混雑しやすいため、公共交通を推奨します</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-parking">
@@ -124,17 +189,29 @@
               <p>会場周辺の駐車場は混雑しやすく、満車になることがあります。<strong>できるだけ公共交通機関でのご来場をおすすめします。</strong></p>
               <p>みやこめっせ駐車場は、<strong>土曜・日曜・祝日は上限料金がありません</strong>（時間課金のみ）。</p>
             </div>
-            <article class="access-park">
-              <h3><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">岡崎公園地下駐車場</a></h3>
-              <p>約500台　／　月〜金 1,200円／24時間　／　土日祝 1,800円／24時間</p>
-              <p><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">空室を確認する</a></p>
-            </article>
-            <article class="access-park">
-              <h3><a href="https://www.miyakomesse.jp/access/parking/" target="_blank" rel="noopener">みやこめっせ駐車場</a></h3>
-              <p>約163台　／　平日 上限1,500円　／　土日祝は上限なし</p>
-            </article>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">駐車場</th><th scope="col">台数</th><th scope="col">料金</th><th scope="col">リンク</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">岡崎公園地下駐車場</th>
+                    <td>約500台</td>
+                    <td>月〜金 1,200円／24時間<br>土日祝 1,800円／24時間</td>
+                    <td><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">空室確認</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">みやこめっせ駐車場</th>
+                    <td>約163台</td>
+                    <td>平日 上限1,500円<br>土日祝 上限なし</td>
+                    <td><a href="https://www.miyakomesse.jp/access/parking/" target="_blank" rel="noopener">詳細</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
-        </div>
+</div>
       </div></div></div>
     </div></div></div>
   </div>
@@ -156,45 +233,118 @@
 
           <section class="access-panel access-panel--focus" id="access-en-recommend">
             <h3 class="access-heading">Recommended routes</h3>
-            <article class="access-route">
-              <h4 class="access-route__title"><span class="access-num">1</span>From JR Kyoto Station</h4>
-              <p class="access-route__body">City Bus <strong>5</strong> (stand A2) or Raku Bus <strong>100</strong> (stand D1) → get off at “<strong>Okazaki Koen / Bijutsukan, Heian Jingu-mae</strong>” → walk north about 5 minutes</p>
-              <p class="access-meta"><span>About 30 min</span><span>230 yen</span></p>
-            </article>
-            <article class="access-route">
-              <h4 class="access-route__title"><span class="access-num">2</span>From Hankyu Kyoto-Kawaramachi</h4>
-              <p class="access-route__body">City Bus <strong>5, 32 or 46</strong> → “<strong>Okazaki Koen / Bijutsukan, Heian Jingu-mae</strong>” or “<strong>Okazaki Koen / Rohm Theatre Kyoto, Miyakomesse-mae</strong>” → walk north about 5 minutes</p>
-              <p class="access-meta"><span>About 10–15 min by bus</span></p>
-            </article>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">From</th><th scope="col">How</th><th scope="col">Bus stop</th><th scope="col">Walk</th><th scope="col">Time / fare</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">JR Kyoto Station</th>
+                    <td>City Bus 5 (A2) / Raku Bus 100 (D1)</td>
+                    <td>Okazaki Koen / Bijutsukan, Heian Jingu-mae</td>
+                    <td>North ~5 min</td>
+                    <td>~30 min / 230 yen</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Hankyu Kyoto-Kawaramachi</th>
+                    <td>City Bus 5 / 32 / 46</td>
+                    <td>Bijutsukan, Heian Jingu-mae<br>or Rohm Theatre / Miyakomesse-mae</td>
+                    <td>North ~5 min</td>
+                    <td>~10–15 min by bus</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-en-bus">
             <h3 class="access-heading">By bus</h3>
-            <div class="access-sub">
-              <h4>JR Kyoto Station</h4>
-              <p>City Bus 5 (A2) or Raku Bus 100 (D1) to “Okazaki Koen / Bijutsukan, Heian Jingu-mae”, then walk north 5 minutes. About 30 minutes / 230 yen. About eight buses per hour.</p>
-            </div>
-            <div class="access-sub">
-              <h4>Hankyu Kyoto-Kawaramachi</h4>
-              <p>From Shijo Kawaramachi, City Bus 5 or 32 (stand H) or 46 (stand E). Get off at Okazaki Koen / Bijutsukan, Heian Jingu-mae or Rohm Theatre / Miyakomesse-mae, then walk north 5 minutes.</p>
-            </div>
-            <div class="access-sub">
-              <h4>Gion / Kiyomizu area</h4>
-              <p>City Bus 201, 203 or 206 to Higashiyama Nijo (walk east 5 minutes), or Raku Bus 100 to Okazaki Koen / Bijutsukan, Heian Jingu-mae (walk north 5 minutes).</p>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">From</th><th scope="col">Route / stand</th><th scope="col">Get off</th><th scope="col">Walk</th><th scope="col">Notes</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">JR Kyoto Station</th>
+                    <td>A2: City Bus 5<br>D1: Raku Bus 100</td>
+                    <td>Okazaki Koen / Bijutsukan, Heian Jingu-mae</td>
+                    <td>North 5 min</td>
+                    <td>230 yen / ~30 min<br>~8 buses per hour</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Hankyu Kyoto-Kawaramachi</th>
+                    <td>City Bus 5 or 32 (H)<br>City Bus 46 (E)</td>
+                    <td>Bijutsukan, Heian Jingu-mae<br>or Rohm / Miyakomesse-mae</td>
+                    <td>North 5 min</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gion / Kiyomizu</th>
+                    <td>City Bus 201 / 203 / 206</td>
+                    <td>Higashiyama Nijo</td>
+                    <td>East 5 min</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gion / Kiyomizu</th>
+                    <td>Raku Bus 100</td>
+                    <td>Okazaki Koen / Bijutsukan, Heian Jingu-mae</td>
+                    <td>North 5 min</td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
           <section class="access-panel" id="access-en-train">
             <h3 class="access-heading">By train</h3>
-            <ul class="access-list">
-              <li>About 10 minutes on foot from Higashiyama Station (T10), Subway Tōzai Line</li>
-              <li>About 15 minutes on foot from Sanjō (40) or Jingu-marutamachi (41), Keihan Oto Line</li>
-            </ul>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">Line</th><th scope="col">Station</th><th scope="col">Walk</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Subway Tōzai Line</th>
+                    <td>Higashiyama (T10)</td>
+                    <td>~10 min</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Keihan Oto Line</th>
+                    <td>Sanjō (40) / Jingu-marutamachi (41)</td>
+                    <td>~15 min</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-en-car">
             <h3 class="access-heading">By car</h3>
-            <p>From Kyoto-higashi IC on the Meishin Expressway, drive west on Sanjō-dōri about 20 minutes, then turn right (north) at Sanjo-jingumichi. No parking inside Heian-jingu; use nearby paid lots (often full—public transport recommended).</p>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">Item</th><th scope="col">Details</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Route</th>
+                    <td>Meishin Kyoto-higashi IC → west on Sanjō-dōri → right (north) at Sanjo-jingumichi (~20 min from IC)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Shrine parking</th>
+                    <td>None — use nearby paid lots</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Note</th>
+                    <td>Lots often fill up; public transport recommended</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section class="access-panel" id="access-en-parking">
@@ -203,16 +353,29 @@
               <p>Lots fill up quickly. <strong>Please use public transportation if you can.</strong></p>
               <p>Miyako Messe has <strong>no daily maximum on Sat/Sun/holidays</strong> (time-based fees only).</p>
             </div>
-            <article class="access-park">
-              <h4><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">Municipal Okazaki Park parking</a></h4>
-              <p>Approx. 500 cars — Mon–Fri 1,200 yen / 24h — Sat/Sun/holidays 1,800 yen / 24h</p>
-            </article>
-            <article class="access-park">
-              <h4><a href="https://www.miyakomesse.jp/english/access/" target="_blank" rel="noopener">Miyako Messe parking</a></h4>
-              <p>Approx. 163 cars — Weekdays max 1,500 yen — Weekends/holidays: no daily maximum</p>
-            </article>
+            <div class="access-table-wrap">
+              <table class="access-table">
+                <thead>
+                  <tr><th scope="col">Lot</th><th scope="col">Capacity</th><th scope="col">Fees</th><th scope="col">Link</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Municipal Okazaki Park</th>
+                    <td>~500</td>
+                    <td>Mon–Fri 1,200 yen / 24h<br>Sat/Sun/holidays 1,800 yen / 24h</td>
+                    <td><a href="https://www.kyotopublic.or.jp/parking/search/detail/e3051111-f3b9-4cf7-a311-55736ab68b9b" target="_blank" rel="noopener">Availability</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Miyako Messe</th>
+                    <td>~163</td>
+                    <td>Weekdays max 1,500 yen<br>Weekends/holidays: no max</td>
+                    <td><a href="https://www.miyakomesse.jp/english/access/" target="_blank" rel="noopener">Details</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
-        </div>
+</div>
       </div></div></div>
     </div></div></div>
   </div>
