@@ -41,8 +41,23 @@ blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
 /* Ownd rem base (same as user.min.css) */
 html { font-size: 62.5%; }
 
-html, body { min-height: 100%; }
+html, body {
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.page,
+.page__outer,
+.page__inner,
+.page__main {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 .page__outer, .page__inner { min-height: 100vh; }
+.block-txt.txt {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 .common-header__nav { flex-wrap: wrap; }
 .common-header-nav__item a { white-space: nowrap; }
 .block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
@@ -618,22 +633,6 @@ html, body { min-height: 100%; }
   line-height: 1.6;
   color: #7a2a22;
 }
-@media only screen and (max-width: 800px) {
-  .bus-stand,
-  .bus-num {
-    font-size: 1.7rem;
-    min-width: 2.1em;
-    padding: 0.3em 0.45em;
-  }
-  .access-page .page__main {
-    max-width: 100% !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-  .access-table--routes {
-    min-width: 920px;
-  }
-}
 .map {
   margin-bottom: 12px;
 }
@@ -645,35 +644,135 @@ html, body { min-height: 100%; }
   margin-top: 12px;
   padding: 0.55em 0;
 }
+
+/* ========== スマホ見やすさ（800px以下） ========== */
 @media only screen and (max-width: 800px) {
+  .page__main {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .block-txt.txt {
+    padding: 1.4rem 1.1rem !important;
+    border-width: 2px !important;
+  }
+  .keyvisual__image {
+    min-height: 180px !important;
+    max-height: 240px !important;
+  }
+  .keyvisual__text {
+    padding: 22px 14px !important;
+  }
+  .keyvisual__title {
+    font-size: 2.2rem !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.35 !important;
+  }
+
+  .bus-stand,
+  .bus-num {
+    font-size: 1.55rem;
+    min-width: 2em;
+    padding: 0.28em 0.42em;
+  }
+
+  .access-page .page__main {
+    max-width: 100% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
   .access-guide {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+    line-height: 1.85;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.2rem 0.95rem !important;
   }
   .access-lead {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
+    line-height: 1.75;
   }
   .access-heading {
-    font-size: 2rem !important;
+    font-size: 1.95rem !important;
   }
   .access-panel {
-    padding: 1.2em 1em 1.3em;
+    padding: 1rem 0.7rem 1.15rem;
+    margin-bottom: 1.25em;
+  }
+  .access-toc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
   }
   .access-toc a {
-    font-size: 1.5rem;
-    padding: 0.7em 1em;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0.85em 0.45em;
+    line-height: 1.35;
   }
-  .access-table {
-    font-size: 1.55rem;
-    min-width: 920px;
+  .bus-explain {
+    padding: 0.85em 0.8em;
+  }
+  .bus-explain__item {
+    font-size: 1.45rem;
+    align-items: flex-start;
+  }
+  .access-table-wrap {
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid #ecd6d4;
+    background: #fff;
+  }
+  .access-table-wrap::after {
+    content: "← 表は横にスクロールできます →";
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #7a2a22;
+    padding: 0.5em 0.4em 0.35em;
+    background: #f7f2ed;
+    border-top: 1px solid #ecd6d4;
+  }
+  .access-guide--en .access-table-wrap::after {
+    content: "← Swipe sideways to see the full table →";
+  }
+  .access-table,
+  .access-table--routes {
+    font-size: 1.4rem;
+    min-width: 640px;
+  }
+  .access-table th,
+  .access-table td {
+    padding: 0.75em 0.65em;
   }
   .access-table thead th {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   .access-table tbody th {
     white-space: normal;
     width: auto;
+    min-width: 5em;
+  }
+  .access-table--routes .col-no {
+    font-size: 1.5rem;
+  }
+  .access-table--routes .col-from,
+  .access-table--routes .col-stand,
+  .access-table--routes .col-bus,
+  .access-table--routes .col-walk,
+  .access-table--routes .col-time {
+    min-width: 0;
   }
   .access-note {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    padding: 0.9em 0.85em;
+  }
+  .access-foot {
+    font-size: 1.45rem;
+  }
+
+  .map-panel {
+    padding: 0.55em !important;
   }
 }
