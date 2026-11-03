@@ -843,7 +843,7 @@ a.bus-stop:hover {
 }
 .m-route-card {
   margin: 0;
-  padding: 1em 1.05em;
+  padding: 1.1em 1.1em 1.15em;
   background: #fffdfb;
   border: 2px solid #e8d0cd;
   border-radius: 4px;
@@ -851,44 +851,23 @@ a.bus-stop:hover {
   width: 100%;
   max-width: 100%;
 }
-/* 京都駅から・東西線から：いちばん大事な案内 */
-.m-route-card--primary {
+/* バス・電車・車の出発地見出しを「京都駅から」と同じく目立たせる */
+.m-route-card--emphasis {
   padding: 1.15em 1.15em 1.2em;
   background: #fff8f5;
   border: 3px solid #a33428;
   box-shadow: 0 0 0 1px rgba(163, 52, 40, 0.12);
 }
-.m-route-card--primary .m-route-card__head {
-  font-size: 2.25rem;
-  color: #a33428;
-  border-bottom-color: #a33428;
-  border-bottom-width: 3px;
-}
-.m-route-card__badge {
-  display: inline-block;
-  margin: 0 0.15em 0.15em 0;
-  padding: 0.2em 0.65em;
-  background: #a33428;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1.35;
-  border-radius: 2px;
-  vertical-align: middle;
-}
 .m-route-card__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35em 0.55em;
+  display: block;
   margin: 0 0 0.65em;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid #ecd6d4;
-  font-size: 2rem;
+  border-bottom: 3px solid #a33428;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1.35;
-  color: #5c1c17;
+  color: #a33428;
+  letter-spacing: 0.02em;
 }
 .m-route-card__row {
   margin: 0.4em 0;
