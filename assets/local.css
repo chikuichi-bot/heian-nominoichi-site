@@ -800,6 +800,35 @@ a.bus-stop:hover {
   border-color: #0a5a36;
   color: #fff;
 }
+/* 電車路線バッジ（バスの市バス5と同型） */
+.train-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28em 0.7em;
+  border-radius: 0.35em;
+  font-weight: 800;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  letter-spacing: 0.02em;
+}
+.train-line--subway {
+  background: #1f4b7a;
+  border-color: #16375a;
+  color: #fff;
+}
+.train-line--tozai {
+  background: #c45c1a;
+  border-color: #9a4514;
+  color: #fff;
+}
+.train-line--keihan {
+  background: #0f7a4a;
+  border-color: #0a5a36;
+  color: #fff;
+}
 /* バス案内はカード（横スクロールなし） */
 .m-route-list {
   display: grid;
@@ -1006,7 +1035,8 @@ a.bus-stop:hover {
   .bus-stand,
   .bus-num,
   .bus-kind,
-  .bus-line {
+  .bus-line,
+  .train-line {
     font-size: 1.25rem;
     min-width: 1.8em;
     padding: 0.2em 0.45em;

@@ -108,7 +108,8 @@
   .bus-stand,
   .bus-num,
   .bus-kind,
-  .bus-line {
+  .bus-line,
+  .train-line {
     font-size: 1.3rem !important;
     min-width: 1.9em;
     padding: 0.22em 0.45em !important;
