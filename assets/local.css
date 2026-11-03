@@ -240,7 +240,7 @@ html, body { min-height: 100%; }
   max-width: 840px !important;
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 .access-page .grid,
 .access-page .block__inner,
@@ -304,15 +304,16 @@ html, body { min-height: 100%; }
   background: #f5eae9;
 }
 /* バス／電車／車／駐車場をそれぞれ独立した枠に分ける */
+/* 左右は padding で確保（子の width:100% + margin だと右枠が欠ける） */
 .access-panel {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
   margin: 0 0 1.6em;
-  padding: 0 0 1.25em;
+  padding: 0 1.1em 1.25em;
   background: #fff;
   border: 3px solid #a33428;
-  overflow: hidden;
+  overflow: visible;
 }
 .access-panel--focus {
   border-color: #a33428;
@@ -322,7 +323,7 @@ html, body { min-height: 100%; }
   margin-bottom: 0;
 }
 .access-panel > .access-heading {
-  margin: 0 0 1em !important;
+  margin: 0 -1.1em 1em !important;
   padding: 0.7em 1.1em !important;
   border-bottom: none !important;
   background: #a33428;
@@ -336,8 +337,10 @@ html, body { min-height: 100%; }
 .access-panel > .m-park-list,
 .access-panel > .access-table-wrap,
 .access-panel > .access-note {
-  margin-left: 1.1em;
-  margin-right: 1.1em;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .access-panel > .access-hint {
   margin-top: 0.15em;
@@ -891,6 +894,13 @@ a.bus-stop:hover {
   margin: 0.4em 0;
   font-size: 1.55rem;
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.m-route-card__row .train-line,
+.m-route-card__row .bus-line {
+  white-space: normal;
+  max-width: 100%;
 }
 .m-route-card__label {
   display: inline-block;
@@ -1026,11 +1036,13 @@ a.bus-stop:hover {
   }
   .access-panel {
     margin-bottom: 1.15em;
-    padding-bottom: 1em;
+    padding: 0 0.85em 1em;
     border-width: 2px;
   }
   .access-panel > .access-heading {
     font-size: 1.75rem !important;
+    margin-left: -0.85em !important;
+    margin-right: -0.85em !important;
     padding: 0.6em 0.85em !important;
   }
   .access-panel > .access-hint,
@@ -1039,8 +1051,8 @@ a.bus-stop:hover {
   .access-panel > .m-park-list,
   .access-panel > .access-table-wrap,
   .access-panel > .access-note {
-    margin-left: 0.85em;
-    margin-right: 0.85em;
+    margin-left: 0;
+    margin-right: 0;
   }
   .access-toc {
     display: flex;
