@@ -139,7 +139,7 @@
   .m-route-card__head {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     gap: 0.35em 0.55em;
     margin: 0 0 0.55em;
     padding-bottom: 0.45em;
@@ -148,6 +148,18 @@
     font-weight: 800 !important;
     line-height: 1.35;
     color: #5c1c17;
+  }
+  .m-route-card--primary {
+    border-width: 3px !important;
+    border-color: #a33428 !important;
+    background: #fff8f5 !important;
+  }
+  .m-route-card--primary .m-route-card__head {
+    font-size: 2.05rem !important;
+    color: #a33428 !important;
+  }
+  .m-route-card__badge {
+    font-size: 1.15rem !important;
   }
   .m-route-card__no {
     display: inline-flex;

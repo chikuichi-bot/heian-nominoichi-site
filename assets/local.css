@@ -848,10 +848,36 @@ a.bus-stop:hover {
   width: 100%;
   max-width: 100%;
 }
+/* 京都駅から・東西線から：いちばん大事な案内 */
+.m-route-card--primary {
+  padding: 1.15em 1.15em 1.2em;
+  background: #fff8f5;
+  border: 3px solid #a33428;
+  box-shadow: 0 0 0 1px rgba(163, 52, 40, 0.12);
+}
+.m-route-card--primary .m-route-card__head {
+  font-size: 2.25rem;
+  color: #a33428;
+  border-bottom-color: #a33428;
+  border-bottom-width: 3px;
+}
+.m-route-card__badge {
+  display: inline-block;
+  margin: 0 0.15em 0.15em 0;
+  padding: 0.2em 0.65em;
+  background: #a33428;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  border-radius: 2px;
+  vertical-align: middle;
+}
 .m-route-card__head {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 0.35em 0.55em;
   margin: 0 0 0.65em;
   padding-bottom: 0.5em;
