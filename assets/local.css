@@ -303,15 +303,51 @@ html, body { min-height: 100%; }
 .access-toc a:hover {
   background: #f5eae9;
 }
+/* バス／電車／車／駐車場をそれぞれ独立した枠に分ける */
 .access-panel {
-  margin: 0 0 1.8em;
-  padding: 1.5em 1.4em 1.6em;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 1.6em;
+  padding: 0 0 1.25em;
   background: #fff;
-  border-top: 4px solid #ecd6d4;
+  border: 3px solid #a33428;
+  overflow: hidden;
 }
 .access-panel--focus {
-  border-top-color: #a33428;
-  background: #fffdfb;
+  border-color: #a33428;
+  background: #fff;
+}
+.access-panel:last-of-type {
+  margin-bottom: 0;
+}
+.access-panel > .access-heading {
+  margin: 0 0 1em !important;
+  padding: 0.7em 1.1em !important;
+  border-bottom: none !important;
+  background: #a33428;
+  color: #fff !important;
+  font-size: 2rem !important;
+  line-height: 1.35 !important;
+}
+.access-panel > .access-hint,
+.access-panel > .access-foot,
+.access-panel > .m-route-list,
+.access-panel > .m-park-list,
+.access-panel > .access-table-wrap,
+.access-panel > .access-note {
+  margin-left: 1.1em;
+  margin-right: 1.1em;
+}
+.access-panel > .access-hint {
+  margin-top: 0.15em;
+}
+.access-panel > .m-route-list,
+.access-panel > .m-park-list {
+  margin-top: 0.15em;
+}
+.access-panel > .access-foot {
+  margin-bottom: 0;
 }
 /* 会場マップ: 外側 .txt の赤枠だけにする（二重にしない） */
 .map-panel.access-panel {
@@ -410,8 +446,8 @@ html, body { min-height: 100%; }
 .m-park-card {
   margin: 0;
   padding: 1em 1.05em;
-  background: #fff;
-  border: 2px solid #ecd6d4;
+  background: #fffdfb;
+  border: 2px solid #e8d0cd;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
@@ -496,6 +532,21 @@ html, body { min-height: 100%; }
   padding: 0;
   border: none;
   background: transparent;
+  overflow: visible;
+}
+#apply-parking.access-panel > .access-heading {
+  margin: 0 0 0.9em !important;
+  padding: 0 0 0.4em !important;
+  background: transparent;
+  color: inherit !important;
+  border-bottom: 2px solid #ecd6d4 !important;
+  font-size: 2.2rem !important;
+}
+#apply-parking.access-panel > .access-hint,
+#apply-parking.access-panel > .m-park-list,
+#apply-parking.access-panel > .access-note {
+  margin-left: 0;
+  margin-right: 0;
 }
 #apply-parking .access-note,
 #apply-parking .m-park-list,
@@ -734,8 +785,8 @@ a.bus-stop:hover {
 .m-route-card {
   margin: 0;
   padding: 1em 1.05em;
-  background: #fff;
-  border: 2px solid #ecd6d4;
+  background: #fffdfb;
+  border: 2px solid #e8d0cd;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
@@ -889,8 +940,22 @@ a.bus-stop:hover {
     line-height: 1.4 !important;
   }
   .access-panel {
-    padding: 1.2em 1em 1.3em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.15em;
+    padding-bottom: 1em;
+    border-width: 2px;
+  }
+  .access-panel > .access-heading {
+    font-size: 1.75rem !important;
+    padding: 0.6em 0.85em !important;
+  }
+  .access-panel > .access-hint,
+  .access-panel > .access-foot,
+  .access-panel > .m-route-list,
+  .access-panel > .m-park-list,
+  .access-panel > .access-table-wrap,
+  .access-panel > .access-note {
+    margin-left: 0.85em;
+    margin-right: 0.85em;
   }
   .access-toc {
     display: flex;
