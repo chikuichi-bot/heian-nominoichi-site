@@ -776,6 +776,30 @@ a.bus-stop:hover {
   background: #0f7a4a;
   border-color: #0a5a36;
 }
+/* 市バス5 / 洛バス100 を1つのバッジに */
+.bus-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28em 0.7em;
+  border-radius: 0.35em;
+  font-weight: 800;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  letter-spacing: 0.02em;
+}
+.bus-line--city {
+  background: #a33428;
+  border-color: #7a2a22;
+  color: #fff;
+}
+.bus-line--raku {
+  background: #0f7a4a;
+  border-color: #0a5a36;
+  color: #fff;
+}
 /* バス案内はカード（横スクロールなし） */
 .m-route-list {
   display: grid;
@@ -981,10 +1005,11 @@ a.bus-stop:hover {
   }
   .bus-stand,
   .bus-num,
-  .bus-kind {
+  .bus-kind,
+  .bus-line {
     font-size: 1.25rem;
     min-width: 1.8em;
-    padding: 0.2em 0.4em;
+    padding: 0.2em 0.45em;
   }
   .access-table-wrap {
     width: 100%;
