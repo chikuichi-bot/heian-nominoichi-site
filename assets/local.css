@@ -406,32 +406,48 @@ html, body { min-height: 100%; }
   letter-spacing: 0.04em;
   line-height: 1.4;
 }
-/* 出店募集のお知らせ（搬入ガイドと同じ読みやすさ） */
-.apply-notice__label {
-  margin: 0.9em 0 0.35em !important;
-  font-size: 1.85rem;
-  font-weight: 800;
-  color: #5c1c17;
-  letter-spacing: 0.04em;
-  line-height: 1.45;
+/* 出店募集のお知らせ — 上段の h3 お知らせより大きく・日付を目立たせる */
+.apply-notice {
+  font-size: 2.3rem !important;
+  line-height: 1.85 !important;
 }
-.apply-notice__label:first-of-type {
-  margin-top: 0.2em !important;
+.apply-notice__title.access-heading {
+  font-size: 2.6rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 1em !important;
+}
+.apply-notice__label {
+  display: inline-block !important;
+  margin: 0.35em 0 0.75em !important;
+  padding: 0.3em 0.85em;
+  background: #a33428;
+  color: #fff !important;
+  font-size: 2rem !important;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
 }
 .apply-notice-list {
-  margin: 0 0 0.6em;
-  padding: 0 0 0 1.25em;
-  font-size: 1.95rem;
-  line-height: 1.85;
+  margin: 0;
+  padding: 0;
 }
-.apply-notice-list li {
-  margin: 0.5em 0;
+.apply-notice__item {
+  margin: 0 0 1.15em !important;
+  padding: 0.85em 1em;
+  background: #fff8f6;
+  border-left: 5px solid #a33428;
+  font-size: 2.25rem !important;
+  line-height: 1.75 !important;
 }
-.apply-notice-list li + li {
-  margin-top: 0.85em;
+.apply-notice__item:last-child {
+  margin-bottom: 0 !important;
 }
-.apply-notice-list strong {
-  font-size: 1.05em;
+.apply-notice__date {
+  display: inline;
+  font-size: 2.55rem;
+  font-weight: 800;
+  color: #5c1c17;
+  letter-spacing: 0.02em;
 }
 /* 出店申し込みの駐車場: 外側の余白をなくし、案内の幅をそろえる */
 #apply-parking.access-panel {

@@ -245,12 +245,22 @@
   .carry-guide h1 {
     font-size: 1.9rem !important;
   }
-  .apply-notice__label {
-    font-size: 1.6rem !important;
+  .apply-notice {
+    font-size: 1.85rem !important;
   }
-  .apply-notice-list {
-    font-size: 1.65rem !important;
-    line-height: 1.8 !important;
+  .apply-notice__title.access-heading {
+    font-size: 2.1rem !important;
+  }
+  .apply-notice__label {
+    font-size: 1.7rem !important;
+  }
+  .apply-notice__item {
+    font-size: 1.85rem !important;
+    line-height: 1.7 !important;
+    padding: 0.75em 0.85em;
+  }
+  .apply-notice__date {
+    font-size: 2.05rem !important;
   }
 
   .map-panel {
