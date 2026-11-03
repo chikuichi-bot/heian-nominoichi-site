@@ -945,6 +945,185 @@ a.bus-stop:hover {
 .m-route-card__option:last-of-type {
   margin-bottom: 0.55em;
 }
+/* 電車ルート図解（縦の路線図） */
+.train-flow {
+  list-style: none;
+  margin: 0.85em 1.05em 0.7em;
+  padding: 0;
+  box-sizing: border-box;
+}
+.train-flow--fork {
+  display: block;
+}
+.train-flow--branch {
+  margin: 0.35em 0 0;
+}
+.train-flow__branches {
+  margin: 0;
+}
+.train-flow__branches .m-route-card__option {
+  margin-left: 0;
+  margin-right: 0;
+}
+.train-flow__branches .m-route-card__or {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.train-flow__node,
+.train-flow__ride {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  column-gap: 0.75em;
+  align-items: start;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.train-flow__node {
+  min-height: 2.4em;
+}
+.train-flow__dot {
+  grid-column: 1;
+  justify-self: center;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.45em;
+  border-radius: 50%;
+  background: #1f4b7a;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #1f4b7a;
+  z-index: 1;
+}
+.train-flow__dot--xfer {
+  background: #c45c1a;
+  box-shadow: 0 0 0 2px #c45c1a;
+  border-radius: 0.2rem;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.train-flow__dot--alight {
+  background: #a33428;
+  box-shadow: 0 0 0 2px #a33428;
+  width: 1rem;
+  height: 1rem;
+}
+.train-flow__dot--venue {
+  background: #a33428;
+  box-shadow: 0 0 0 2px #a33428;
+  border-radius: 0.15rem;
+  width: 0.95rem;
+  height: 0.95rem;
+}
+.train-flow__body {
+  grid-column: 2;
+  font-size: 1.55rem;
+  line-height: 1.5;
+  padding: 0.15em 0 0.35em;
+  overflow-wrap: anywhere;
+}
+.train-flow__act {
+  display: inline-block;
+  margin-right: 0.4em;
+  padding: 0.12em 0.45em;
+  border-radius: 0.25em;
+  background: #1f4b7a;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+.train-flow__act--xfer {
+  background: #c45c1a;
+}
+.train-flow__node--alight .train-flow__act,
+.train-flow__node--venue .train-flow__act {
+  background: #a33428;
+}
+.train-flow__hint {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 1.35rem;
+  color: #7a2a22;
+  font-weight: 700;
+}
+.train-flow__ride {
+  min-height: 2.6em;
+  align-items: center;
+  grid-template-rows: auto auto;
+}
+.train-flow__ride::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / -1;
+  justify-self: center;
+  align-self: stretch;
+  width: 4px;
+  min-height: 2.4em;
+  border-radius: 2px;
+  background: #1f4b7a;
+}
+.train-flow__ride--subway::before {
+  background: #1f4b7a;
+}
+.train-flow__ride--tozai::before {
+  background: #c45c1a;
+}
+.train-flow__ride--keihan::before {
+  background: #0f7a4a;
+}
+.train-flow__ride--walk::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    #a33428 0,
+    #a33428 5px,
+    transparent 5px,
+    transparent 9px
+  );
+  width: 3px;
+}
+.train-flow__ride > .train-line {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0.15em 0;
+  justify-self: start;
+}
+.train-flow__ride > .train-flow__dir {
+  grid-column: 2;
+  grid-row: 2;
+}
+.train-flow__ride > .train-flow__walk {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+}
+.train-flow__ride > .train-flow__dir:only-child,
+.train-flow__ride > .train-line:only-child {
+  grid-row: 1;
+}
+.train-flow__dir {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 1.3rem;
+  color: #5c1c17;
+  font-weight: 600;
+}
+.train-flow__walk {
+  display: inline-block;
+  padding: 0.2em 0.55em;
+  border: 2px dashed #a33428;
+  border-radius: 0.3em;
+  background: #fff;
+  color: #a33428;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.m-route-card--emphasis > .train-flow + .m-route-card__row {
+  margin-left: 1.05em;
+  margin-right: 1.05em;
+  margin-bottom: 1em;
+  padding-bottom: 0.25em;
+}
 .access-table--routes th,
 .access-table--routes td {
   vertical-align: middle;

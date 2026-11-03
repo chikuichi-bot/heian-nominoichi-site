@@ -201,36 +201,139 @@
             <div class="m-route-list">
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">京都駅から</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">電車</span><span class="train-line train-line--subway">地下鉄 烏丸線</span></p>
-                <p class="m-route-card__row"><span class="m-route-card__label">乗る</span><span class="place-name">京都駅</span>（地下鉄）</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">乗換</span><span class="place-name">烏丸御池</span>で <span class="train-line train-line--tozai">東西線</span>へ（六地蔵・醍醐方面）</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">降りる</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">東山駅</a>（東山三条 · いちばん近い）</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>会場まで北へ約10分</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約20分（乗換含む）· <strong>260円</strong>前後</p>
+                <ol class="train-flow" aria-label="京都駅からの電車ルート図">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">乗る</span>
+                      <span class="place-name">京都駅</span>（地下鉄）
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--subway" aria-hidden="true">
+                    <span class="train-line train-line--subway">地下鉄 烏丸線</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--xfer">
+                    <span class="train-flow__dot train-flow__dot--xfer" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--xfer">乗換</span>
+                      <span class="place-name">烏丸御池</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--tozai" aria-hidden="true">
+                    <span class="train-line train-line--tozai">地下鉄 東西線</span>
+                    <span class="train-flow__dir">六地蔵・醍醐方面</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">降りる</span>
+                      <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">東山駅</a>
+                      <span class="train-flow__hint">東山三条 · いちばん近い</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">徒歩 · 北へ約10分</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">到着</span>
+                      <strong>会場</strong>
+                    </div>
+                  </li>
+                </ol>
+                <p class="m-route-card__row"><span class="m-route-card__label">時間</span>約20分（乗換1回）· <strong>260円</strong>前後</p>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">地下鉄 東西線から</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">電車</span><span class="train-line train-line--tozai">地下鉄 東西線</span></p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">東山駅</a>（東山三条）</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>会場まで北へ約10分</p>
-                </div>
-                <p class="m-route-card__row"><span class="m-route-card__label">めやす</span>二条・烏丸御池・京都市役所前など、東西線のどの駅からでもOK</p>
+                <p class="m-route-card__note">乗り継ぎなし。東西線のどの駅からでも、そのまま東山駅へ。</p>
+                <ol class="train-flow" aria-label="東西線からのルート図">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">乗る</span>
+                      東西線の各駅（二条・烏丸御池・京都市役所前 など）
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--tozai" aria-hidden="true">
+                    <span class="train-line train-line--tozai">地下鉄 東西線</span>
+                    <span class="train-flow__dir">乗り継ぎなし</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">降りる</span>
+                      <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">東山駅</a>
+                      <span class="train-flow__hint">東山三条</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">徒歩 · 北へ約10分</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">到着</span>
+                      <strong>会場</strong>
+                    </div>
+                  </li>
+                </ol>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">京阪から</p>
                 <p class="m-route-card__note">下の<strong>どちらか1駅</strong>で降りてください（乗り継ぎなし・駅は別々の行き方です）。</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">電車</span><span class="train-line train-line--keihan">京阪 鴨東線</span></p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__choice">行き方1 · 三条駅で降りる</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E4%B8%89%E6%9D%A1%E9%A7%85" target="_blank" rel="noopener">三条駅</a></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>会場まで東へ約15分</p>
-                </div>
-                <p class="m-route-card__or" aria-hidden="true">または</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__choice">行き方2 · 神宮丸太町駅で降りる</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">降りる</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E7%A5%9E%E5%AE%AE%E4%B8%B8%E5%A4%AA%E7%94%BA%E9%A7%85" target="_blank" rel="noopener">神宮丸太町駅</a></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">徒歩</span>会場まで南東へ約15分</p>
+                <div class="train-flow train-flow--fork" aria-label="京阪からの2つの行き方">
+                  <div class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">乗る</span>
+                      <span class="train-line train-line--keihan">京阪 鴨東線</span>
+                    </div>
+                  </div>
+                  <div class="train-flow__ride train-flow__ride--keihan" aria-hidden="true">
+                    <span class="train-flow__dir">ここで分岐 · どちらか一方</span>
+                  </div>
+                  <div class="train-flow__branches">
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">行き方1</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--alight">
+                          <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="train-flow__act">降りる</span>
+                            <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E4%B8%89%E6%9D%A1%E9%A7%85" target="_blank" rel="noopener">三条駅</a>
+                          </div>
+                        </li>
+                        <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                          <span class="train-flow__walk">徒歩 · 東へ約15分</span>
+                        </li>
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body"><strong>会場</strong></div>
+                        </li>
+                      </ol>
+                    </div>
+                    <p class="m-route-card__or" aria-hidden="true">または</p>
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">行き方2</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--alight">
+                          <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="train-flow__act">降りる</span>
+                            <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E7%A5%9E%E5%AE%AE%E4%B8%B8%E5%A4%AA%E7%94%BA%E9%A7%85" target="_blank" rel="noopener">神宮丸太町駅</a>
+                          </div>
+                        </li>
+                        <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                          <span class="train-flow__walk">徒歩 · 南東へ約15分</span>
+                        </li>
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body"><strong>会場</strong></div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
                 </div>
               </article>
             </div>
@@ -436,36 +539,139 @@
             <div class="m-route-list">
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">From Kyoto Station</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">Train</span><span class="train-line train-line--subway">Subway Karasuma</span></p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Board</span><span class="place-name">Kyoto Station</span> (subway)</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Transfer</span>At <span class="place-name">Karasuma Oike</span> to the <span class="train-line train-line--tozai">Tōzai Line</span> (toward Rokujizō / Daigo)</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Get off</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">Higashiyama (T10)</a> (Higashiyama-Sanjō · closest)</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~10 min to the venue</p>
-                <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~20 min including transfer · about <strong>260 yen</strong></p>
+                <ol class="train-flow" aria-label="Train route from Kyoto Station">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Board</span>
+                      <span class="place-name">Kyoto Station</span> (subway)
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--subway" aria-hidden="true">
+                    <span class="train-line train-line--subway">Subway Karasuma</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--xfer">
+                    <span class="train-flow__dot train-flow__dot--xfer" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--xfer">Transfer</span>
+                      <span class="place-name">Karasuma Oike</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--tozai" aria-hidden="true">
+                    <span class="train-line train-line--tozai">Subway Tōzai</span>
+                    <span class="train-flow__dir">toward Rokujizō / Daigo</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Get off</span>
+                      <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">Higashiyama (T10)</a>
+                      <span class="train-flow__hint">Higashiyama-Sanjō · closest</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">Walk · North ~10 min</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Arrive</span>
+                      <strong>Venue</strong>
+                    </div>
+                  </li>
+                </ol>
+                <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~20 min (1 transfer) · about <strong>260 yen</strong></p>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">On the Tōzai Line</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">Train</span><span class="train-line train-line--tozai">Subway Tōzai Line</span></p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">Higashiyama (T10)</a> (Higashiyama-Sanjō)</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>North ~10 min to the venue</p>
-                </div>
-                <p class="m-route-card__row"><span class="m-route-card__label">Tip</span>Any Tōzai station works (Nijō, Karasuma Oike, Kyoto Shiyakusho-mae, etc.)</p>
+                <p class="m-route-card__note">No transfer. Ride any Tōzai station straight to Higashiyama.</p>
+                <ol class="train-flow" aria-label="Route on the Tōzai Line">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Board</span>
+                      Any Tōzai station (Nijō, Karasuma Oike, Kyoto Shiyakusho-mae, etc.)
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--tozai" aria-hidden="true">
+                    <span class="train-line train-line--tozai">Subway Tōzai</span>
+                    <span class="train-flow__dir">no transfer</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Get off</span>
+                      <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E4%B8%8B%E9%89%84+%E6%9D%B1%E5%B1%B1%E9%A7%85" target="_blank" rel="noopener">Higashiyama (T10)</a>
+                      <span class="train-flow__hint">Higashiyama-Sanjō</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">Walk · North ~10 min</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Arrive</span>
+                      <strong>Venue</strong>
+                    </div>
+                  </li>
+                </ol>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">From Keihan</p>
                 <p class="m-route-card__note">Get off at <strong>either one</strong> station — two separate ways, no transfer.</p>
-                <p class="m-route-card__row m-route-card__bus"><span class="m-route-card__label">Train</span><span class="train-line train-line--keihan">Keihan Oto Line</span></p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__choice">Option 1 · Get off at Sanjō</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E4%B8%89%E6%9D%A1%E9%A7%85" target="_blank" rel="noopener">Sanjō (40)</a></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>East ~15 min to the venue</p>
-                </div>
-                <p class="m-route-card__or" aria-hidden="true">or</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__choice">Option 2 · Get off at Jingu-marutamachi</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Get off</span><a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E7%A5%9E%E5%AE%AE%E4%B8%B8%E5%A4%AA%E7%94%BA%E9%A7%85" target="_blank" rel="noopener">Jingu-marutamachi (41)</a></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Walk</span>Southeast ~15 min to the venue</p>
+                <div class="train-flow train-flow--fork" aria-label="Two Keihan options">
+                  <div class="train-flow__node">
+                    <span class="train-flow__dot" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Board</span>
+                      <span class="train-line train-line--keihan">Keihan Oto Line</span>
+                    </div>
+                  </div>
+                  <div class="train-flow__ride train-flow__ride--keihan" aria-hidden="true">
+                    <span class="train-flow__dir">Choose one branch</span>
+                  </div>
+                  <div class="train-flow__branches">
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">Option 1</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--alight">
+                          <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="train-flow__act">Get off</span>
+                            <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E4%B8%89%E6%9D%A1%E9%A7%85" target="_blank" rel="noopener">Sanjō (40)</a>
+                          </div>
+                        </li>
+                        <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                          <span class="train-flow__walk">Walk · East ~15 min</span>
+                        </li>
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body"><strong>Venue</strong></div>
+                        </li>
+                      </ol>
+                    </div>
+                    <p class="m-route-card__or" aria-hidden="true">or</p>
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">Option 2</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--alight">
+                          <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="train-flow__act">Get off</span>
+                            <a class="bus-stop" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%AC%E9%98%AA+%E7%A5%9E%E5%AE%AE%E4%B8%B8%E5%A4%AA%E7%94%BA%E9%A7%85" target="_blank" rel="noopener">Jingu-marutamachi (41)</a>
+                          </div>
+                        </li>
+                        <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                          <span class="train-flow__walk">Walk · Southeast ~15 min</span>
+                        </li>
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body"><strong>Venue</strong></div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
                 </div>
               </article>
             </div>

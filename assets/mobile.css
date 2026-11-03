@@ -192,6 +192,26 @@
   .m-route-card__option:last-of-type {
     margin-bottom: 0.35em;
   }
+  .train-flow {
+    margin: 0.7em 0.85em 0.55em;
+  }
+  .train-flow__body {
+    font-size: 1.4rem;
+  }
+  .train-flow__act {
+    font-size: 1.15rem;
+  }
+  .train-flow__walk {
+    font-size: 1.25rem;
+  }
+  .train-flow__branches .m-route-card__option {
+    margin: 0 0 0.55em;
+    padding: 0.65em 0.7em;
+    background: #fff;
+    border: 2px solid #e8d0cd;
+    border-radius: 4px;
+    border-bottom: 2px solid #e8d0cd;
+  }
 
   /* 駐車場カード */
   .m-park-list {
