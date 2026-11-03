@@ -876,9 +876,19 @@ a.bus-stop:hover {
   margin-left: 1.05em;
   margin-right: 1.05em;
 }
-.m-route-card--emphasis > .m-route-card__row:last-child {
+.m-route-card--emphasis > .m-route-card__row:last-child,
+.m-route-card--emphasis > .m-route-card__foot:last-child {
   margin-bottom: 1em;
   padding-bottom: 0.25em;
+}
+.m-route-card__foot {
+  margin: 0.55em 1.05em 0 !important;
+  padding: 0.55em 0.75em;
+  background: #fff;
+  border: 2px solid #ecd6d4;
+  font-size: 1.45rem !important;
+  line-height: 1.5;
+  color: #7a2a22;
 }
 .m-route-card__row {
   margin: 0.4em 0;
