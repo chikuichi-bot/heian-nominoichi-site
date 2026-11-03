@@ -702,24 +702,34 @@ html, body { min-height: 100%; }
   color: #fff;
   border: 2px solid #7a2a22;
 }
-/* 降りるバス停名（タップで Googleマップ） */
+/* 降りるバス停名（タップで Googleマップ）— いちばん目立つ */
 a.bus-stop,
 .bus-stop {
   display: inline-block;
-  margin: 0.1em 0;
-  padding: 0.28em 0.55em;
-  border: 2px solid #a33428;
-  background: #fffdfb;
+  margin: 0.15em 0;
+  padding: 0.38em 0.7em;
+  border: 3px solid #a33428;
+  background: #fff;
   color: #a33428 !important;
-  font-weight: 700;
-  line-height: 1.4;
-  border-radius: 2px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  border-radius: 3px;
   text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(163, 52, 40, 0.12);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 a.bus-stop:hover {
   background: #f7ebe8;
+}
+.m-route-card__row .bus-stop {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+.access-table .bus-stop {
+  font-size: 1.75rem;
 }
 /* 電車の駅・車の地名など、見るべき名前 */
 .place-name {
