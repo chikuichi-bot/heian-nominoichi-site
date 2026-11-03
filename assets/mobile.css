@@ -60,10 +60,14 @@
     padding-right: 6px !important;
   }
   .access-guide {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    width: 100% !important;
     font-size: 1.55rem !important;
     line-height: 1.75 !important;
     letter-spacing: normal !important;
-    padding: 1rem 0.85rem !important;
+    /* .block-txt.txt の padding と二重にしない（赤枠はみ出し防止） */
+    padding: 0 !important;
   }
   .access-lead {
     font-size: 2.15rem !important;
@@ -240,6 +244,13 @@
   }
   .carry-guide h1 {
     font-size: 1.9rem !important;
+  }
+  .apply-notice__label {
+    font-size: 1.6rem !important;
+  }
+  .apply-notice-list {
+    font-size: 1.65rem !important;
+    line-height: 1.8 !important;
   }
 
   .map-panel {

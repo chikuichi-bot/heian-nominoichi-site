@@ -248,8 +248,10 @@ html, body { min-height: 100%; }
   max-width: none;
   overflow: visible;
 }
+/* .block-txt.txt 自身に付くクラス — width:100%+padding で赤枠が右にはみ出すのを防ぐ */
 .access-guide {
-  max-width: none;
+  box-sizing: border-box;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   line-height: 1.9;
@@ -404,28 +406,32 @@ html, body { min-height: 100%; }
   letter-spacing: 0.04em;
   line-height: 1.4;
 }
-/* 出店募集のお知らせ */
+/* 出店募集のお知らせ（搬入ガイドと同じ読みやすさ） */
 .apply-notice__label {
   margin: 0.9em 0 0.35em !important;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #5c1c17;
   letter-spacing: 0.04em;
+  line-height: 1.45;
 }
 .apply-notice__label:first-of-type {
   margin-top: 0.2em !important;
 }
 .apply-notice-list {
   margin: 0 0 0.6em;
-  padding: 0 0 0 1.2em;
-  font-size: 1.7rem;
-  line-height: 1.7;
+  padding: 0 0 0 1.25em;
+  font-size: 1.95rem;
+  line-height: 1.85;
 }
 .apply-notice-list li {
-  margin: 0.45em 0;
+  margin: 0.5em 0;
 }
 .apply-notice-list li + li {
-  margin-top: 0.75em;
+  margin-top: 0.85em;
+}
+.apply-notice-list strong {
+  font-size: 1.05em;
 }
 /* 出店申し込みの駐車場: 外側の余白をなくし、案内の幅をそろえる */
 #apply-parking.access-panel {
