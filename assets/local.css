@@ -319,6 +319,38 @@ html, body { min-height: 100%; }
   border-top: none;
   background: transparent;
 }
+/* 出店申し込みでも駐車場カードを常時表示（幅を注意枠と揃える） */
+.m-park-list.apply-park-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.2em 0 0;
+}
+.m-park-list.apply-park-list .m-park-card {
+  margin: 0;
+  padding: 0.9em 0.85em;
+  background: #fff;
+  border: 2px solid #ecd6d4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.m-park-list.apply-park-list .m-park-card h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.7rem;
+  line-height: 1.35;
+}
+.m-park-list.apply-park-list .m-park-card p {
+  margin: 0.35em 0;
+  font-size: 1.45rem;
+  line-height: 1.55;
+}
+.m-park-list.apply-park-list .m-park-card a {
+  display: inline-block;
+  margin-top: 0.45em;
+  font-weight: 700;
+  text-decoration: underline;
+}
 .map-figure {
   margin: 0;
   width: 100%;
@@ -343,6 +375,9 @@ html, body { min-height: 100%; }
   line-height: 1.4 !important;
 }
 .access-note {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   margin: 0 0 1.2em;
   padding: 1.1em 1.2em;
   background: #f5eae9;
@@ -356,7 +391,10 @@ html, body { min-height: 100%; }
   box-shadow: inset 0 0 0 1px rgba(168, 51, 51, 0.12);
 }
 .access-note__label {
-  display: inline-block;
+  display: inline-block !important;
+  width: auto !important;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 0 0 0.55em !important;
   padding: 0.25em 0.7em;
   background: #a83333;
@@ -365,6 +403,24 @@ html, body { min-height: 100%; }
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.4;
+}
+/* 出店申し込みの駐車場: 外側の余白をなくし、案内の幅をそろえる */
+#apply-parking.access-panel {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+#apply-parking .access-note,
+#apply-parking .m-park-list,
+#apply-parking .access-table-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+#apply-parking .access-table {
+  min-width: 0;
+  width: 100%;
 }
 .access-note__contrast {
   margin-top: 0.55em !important;
