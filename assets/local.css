@@ -823,7 +823,17 @@ a.bus-stop:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35em;
-  margin: 0.35em 0 0.35em;
+  margin: 0.35em 0;
+}
+.m-route-card__row .bus-stand {
+  vertical-align: middle;
+}
+.bus-stand.muted {
+  min-width: auto;
+  padding-left: 0.55em;
+  padding-right: 0.55em;
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 .m-route-card__option {
   margin: 0 0 0.7em;
