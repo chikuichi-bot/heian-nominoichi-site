@@ -1014,6 +1014,21 @@ a.bus-stop:hover {
   width: 0.95rem;
   height: 0.95rem;
 }
+.train-flow__dot--road {
+  background: #5a4a3a;
+  box-shadow: 0 0 0 2px #5a4a3a;
+}
+.train-flow__act--road {
+  background: #5a4a3a;
+}
+.train-flow__ride--road::before {
+  background: #5a4a3a;
+}
+.train-flow__walk--road {
+  border-color: #5a4a3a;
+  color: #5a4a3a;
+  border-style: solid;
+}
 .train-flow__body {
   grid-column: 2;
   font-size: 1.55rem;

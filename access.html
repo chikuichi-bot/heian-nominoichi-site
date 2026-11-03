@@ -341,18 +341,87 @@
             <div class="m-route-list">
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">行き方</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">1</span>名神高速「<span class="place-name">京都東インター</span>」で降りる</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">2</span><span class="place-name">三条通</span>を西へ進む</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">3</span>「<span class="place-name">神宮道</span>」交差点を北（右折）すぐ</p>
-                </div>
+                <ol class="train-flow" aria-label="車での行き方図解">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">降りる</span>
+                      名神高速「<span class="place-name">京都東インター</span>」
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__walk train-flow__walk--road">一般道へ</span>
+                  </li>
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">進む</span>
+                      <span class="place-name">三条通</span>を西へ
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__walk train-flow__walk--road">交差点まで</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">右折</span>
+                      「<span class="place-name">神宮道</span>」交差点を北へ
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">すぐ</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">到着</span>
+                      <strong>会場</strong>
+                    </div>
+                  </li>
+                </ol>
                 <p class="m-route-card__row"><span class="m-route-card__label">時間</span>インターから約20分</p>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">駐車場</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">候補</span><span class="place-name">岡崎公園 地下駐車場</span>（約500台）</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">候補</span><span class="place-name">みやこめっせ 駐車場</span>（約163台）</p>
+                <div class="train-flow train-flow--fork" aria-label="駐車場の候補">
+                  <div class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">駐車</span>
+                      会場すぐ近くの有料駐車場（どちらか）
+                    </div>
+                  </div>
+                  <div class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__dir">搬入後に停めてください</span>
+                  </div>
+                  <div class="train-flow__branches">
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">候補1</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="place-name">岡崎公園 地下駐車場</span>
+                            <span class="train-flow__hint">約500台</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                    <p class="m-route-card__or" aria-hidden="true">または</p>
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">候補2</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="place-name">みやこめっせ 駐車場</span>
+                            <span class="train-flow__hint">約163台</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
                 </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">くわしく</span><a href="#access-parking">料金・空き状況はこちら</a></p>
               </article>
@@ -674,18 +743,87 @@
             <div class="m-route-list">
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">Directions</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">1</span>Exit Meishin at <span class="place-name">Kyoto-higashi IC</span></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">2</span>Go west on <span class="place-name">Sanjō-dōri</span></p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">3</span>Turn right (north) at <span class="place-name">Sanjo-jingumichi</span></p>
-                </div>
+                <ol class="train-flow" aria-label="Driving directions diagram">
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">Exit</span>
+                      Meishin · <span class="place-name">Kyoto-higashi IC</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__walk train-flow__walk--road">Onto local roads</span>
+                  </li>
+                  <li class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">Drive</span>
+                      West on <span class="place-name">Sanjō-dōri</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__walk train-flow__walk--road">To the intersection</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--alight">
+                    <span class="train-flow__dot train-flow__dot--alight" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Turn</span>
+                      Right (north) at <span class="place-name">Sanjo-jingumichi</span>
+                    </div>
+                  </li>
+                  <li class="train-flow__ride train-flow__ride--walk" aria-hidden="true">
+                    <span class="train-flow__walk">Just ahead</span>
+                  </li>
+                  <li class="train-flow__node train-flow__node--venue">
+                    <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act">Arrive</span>
+                      <strong>Venue</strong>
+                    </div>
+                  </li>
+                </ol>
                 <p class="m-route-card__row"><span class="m-route-card__label">Time</span>~20 min from the IC</p>
               </article>
               <article class="m-route-card m-route-card--emphasis">
                 <p class="m-route-card__head">Parking</p>
-                <div class="m-route-card__option">
-                  <p class="m-route-card__row"><span class="m-route-card__label">Lot</span><span class="place-name">Okazaki Park underground</span> (~500 spaces)</p>
-                  <p class="m-route-card__row"><span class="m-route-card__label">Lot</span><span class="place-name">Miyako Messe</span> (~163 spaces)</p>
+                <div class="train-flow train-flow--fork" aria-label="Parking options">
+                  <div class="train-flow__node">
+                    <span class="train-flow__dot train-flow__dot--road" aria-hidden="true"></span>
+                    <div class="train-flow__body">
+                      <span class="train-flow__act train-flow__act--road">Park</span>
+                      Paid lots by the venue (either one)
+                    </div>
+                  </div>
+                  <div class="train-flow__ride train-flow__ride--road" aria-hidden="true">
+                    <span class="train-flow__dir">Park after unloading</span>
+                  </div>
+                  <div class="train-flow__branches">
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">Lot 1</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="place-name">Okazaki Park underground</span>
+                            <span class="train-flow__hint">~500 spaces</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                    <p class="m-route-card__or" aria-hidden="true">or</p>
+                    <div class="m-route-card__option">
+                      <p class="m-route-card__choice">Lot 2</p>
+                      <ol class="train-flow train-flow--branch">
+                        <li class="train-flow__node train-flow__node--venue">
+                          <span class="train-flow__dot train-flow__dot--venue" aria-hidden="true"></span>
+                          <div class="train-flow__body">
+                            <span class="place-name">Miyako Messe</span>
+                            <span class="train-flow__hint">~163 spaces</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
                 </div>
                 <p class="m-route-card__row"><span class="m-route-card__label">More</span><a href="#access-en-parking">Fees &amp; availability</a></p>
               </article>
