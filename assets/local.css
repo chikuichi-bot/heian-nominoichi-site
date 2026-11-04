@@ -913,7 +913,7 @@ a.bus-stop:hover {
 }
 .m-route-card__label {
   display: inline-block;
-  min-width: 4.2em;
+  min-width: 5.2em;
   margin-right: 0.35em;
   color: #7a2a22;
   font-weight: 700;
