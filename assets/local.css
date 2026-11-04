@@ -730,6 +730,18 @@ a.bus-stop:hover {
 .access-table .bus-stop {
   font-size: 1.65rem;
 }
+/* HOME キービジュアル：和英タイトルを改行 */
+.keyvisual__title {
+  line-height: 1.35;
+}
+.keyvisual__title-en {
+  display: block;
+  margin-top: 0.25em;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
 /* 電車の駅・車の地名など、見るべき名前 */
 .place-name {
   font-weight: 700;
