@@ -44,12 +44,23 @@
     max-height: 220px !important;
   }
   .keyvisual__text {
-    padding: 1.2rem 1rem !important;
+    padding: 1.05rem 0.55rem !important;
   }
   .keyvisual__title {
-    font-size: 2rem !important;
-    letter-spacing: 0.04em !important;
-    line-height: 1.35 !important;
+    font-size: inherit !important;
+    letter-spacing: normal !important;
+    line-height: 1.15 !important;
+    width: 100% !important;
+  }
+  .keyvisual__title-ja {
+    font-size: calc((100vw - 2rem) / 5.3) !important;
+    letter-spacing: 0.1em !important;
+    white-space: nowrap !important;
+  }
+  .keyvisual__title-en {
+    font-size: calc((100vw - 2rem) / 13.6) !important;
+    letter-spacing: 0.025em !important;
+    white-space: nowrap !important;
   }
 
   /* アクセス：スマホ専用 */

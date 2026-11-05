@@ -750,17 +750,60 @@ a.bus-stop:hover {
 .access-table .bus-stop {
   font-size: 1.65rem;
 }
-/* HOME キービジュアル：和英タイトルを改行 */
+/* HOME キービジュアル：英題を画面幅いっぱい · 和題も同じ幅に合わせる */
+.keyvisual__text {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0.55rem;
+  padding-right: 0.55rem;
+  overflow-x: hidden;
+}
 .keyvisual__title {
-  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: normal;
+  font-size: inherit;
+}
+.keyvisual__title-ja {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  font-size: calc((100vw - 2rem) / 5.3);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.15;
+  white-space: nowrap;
+  text-align: center;
 }
 .keyvisual__title-en {
   display: block;
-  margin-top: 0.25em;
-  font-size: 0.72em;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.28em;
+  font-size: calc((100vw - 2rem) / 13.6);
   font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.3;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-align: center;
+}
+@media only screen and (min-width: 801px) {
+  .keyvisual__title-ja {
+    font-size: calc((min(100vw, 840px) - 3.5rem) / 5.3);
+  }
+  .keyvisual__title-en {
+    font-size: calc((min(100vw, 840px) - 3.5rem) / 13.6);
+  }
 }
 /* 電車の駅・車の地名など、見るべき名前 */
 .place-name {
