@@ -791,6 +791,14 @@ a.bus-stop:hover {
   font-size: inherit !important;
   font-weight: inherit !important;
 }
+.schedule-list--en .schedule-month {
+  padding-right: 0.45em;
+  letter-spacing: 0.01em;
+}
+.schedule-list--en .schedule-detail {
+  padding-left: 0.2em;
+  letter-spacing: 0.01em;
+}
 @media only screen and (max-width: 800px) {
   .txt .schedule-list,
   .schedule-list {
