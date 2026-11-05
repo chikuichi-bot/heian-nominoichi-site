@@ -979,10 +979,11 @@ a.bus-stop:hover {
 .home-about__lang {
   text-align: left !important;
 }
+/* .txt div { font-size:1.4rem } が子divでリセットするので、連絡先は要素ごとに rem+!important */
 .txt .home-contact__title,
 .home-contact__title {
-  margin-bottom: 0.7em !important;
-  font-size: 4rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 3.2rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em;
   line-height: 1.3 !important;
@@ -991,27 +992,30 @@ a.bus-stop:hover {
 .home-contact__rows {
   display: flex !important;
   flex-direction: column;
-  gap: 1.15em;
+  gap: 1.6rem;
   width: 100%;
-  max-width: 36rem;
-  margin: 0 auto 0.9em !important;
+  max-width: 100%;
+  margin: 0 auto 1rem !important;
   text-align: left !important;
-  font-size: 4.8rem !important;
+  font-size: inherit !important;
   font-weight: inherit !important;
 }
 .txt .home-contact__row,
-.home-contact__row {
+.home-contact__row,
+.txt .home-contact div.home-contact__row {
   display: grid !important;
   grid-template-columns: 1fr;
-  row-gap: 0.18em;
+  row-gap: 0.35rem;
   align-items: start;
+  font-size: 4.8rem !important;
+  line-height: 1.3 !important;
 }
 .txt .home-contact__key,
 .home-contact__key {
   box-sizing: border-box;
   text-align: left;
   white-space: nowrap;
-  font-size: 0.48em !important;
+  font-size: 2rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em;
   line-height: 1.35 !important;
@@ -1021,23 +1025,29 @@ a.bus-stop:hover {
   content: "";
 }
 .txt .home-contact__val,
-.home-contact__val {
+.home-contact__val,
+.txt .home-contact span.home-contact__val {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.28em;
+  gap: 0.55rem;
   min-width: 0;
   width: 100%;
   text-align: left;
+  font-size: 4.8rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.04em;
-  line-height: 1.35 !important;
+  line-height: 1.3 !important;
 }
-.txt .home-contact__val a {
+.txt .home-contact__val a,
+.txt .home-contact a.u-lnk-clr,
+.home-contact__val a {
   display: inline-block;
   max-width: 100%;
+  font-size: 4.8rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.04em;
+  line-height: 1.3 !important;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -1045,7 +1055,7 @@ a.bus-stop:hover {
 .home-contact__note {
   display: block !important;
   max-width: 100%;
-  font-size: 0.42em !important;
+  font-size: 1.9rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.02em;
   line-height: 1.55 !important;
@@ -1053,7 +1063,7 @@ a.bus-stop:hover {
 }
 .txt .home-contact__org,
 .home-contact__org {
-  margin: 0.55em 0 0 !important;
+  margin: 1rem 0 0 !important;
   font-size: 2.4rem !important;
   font-weight: 500 !important;
   line-height: 1.5 !important;
@@ -1068,18 +1078,36 @@ a.bus-stop:hover {
   }
   .txt .home-contact__lang,
   .home-contact__lang {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
   }
   .txt .home-contact__title,
   .home-contact__title {
-    font-size: 3.4rem !important;
+    font-size: 2.8rem !important;
   }
   .txt .home-contact__rows,
   .home-contact__rows {
     width: 100%;
     max-width: none;
+    gap: 1.4rem;
+  }
+  .txt .home-contact__row,
+  .home-contact__row,
+  .txt .home-contact div.home-contact__row,
+  .txt .home-contact__val,
+  .home-contact__val,
+  .txt .home-contact span.home-contact__val,
+  .txt .home-contact__val a,
+  .txt .home-contact a.u-lnk-clr,
+  .home-contact__val a {
     font-size: 4.2rem !important;
-    gap: 1em;
+  }
+  .txt .home-contact__key,
+  .home-contact__key {
+    font-size: 1.8rem !important;
+  }
+  .txt .home-contact__note,
+  .home-contact__note {
+    font-size: 1.7rem !important;
   }
   .txt .home-contact__org,
   .home-contact__org {
