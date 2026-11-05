@@ -37,6 +37,10 @@ blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
 .u-font {
   font-family: Helvetica, "Helvetica Neue", Arial, "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", serif;
 }
+/* HOME 見出し・日時用：和英の太さを揃える明朝スタック */
+:root {
+  --home-mincho: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", serif;
+}
 
 /* Ownd rem base (same as user.min.css) */
 html { font-size: 62.5%; }
@@ -780,7 +784,7 @@ a.bus-stop:hover {
   letter-spacing: 0.04em;
   color: inherit !important;
   /* 和英とも同じ書体・太さ（Helvetica太字だけ濃く見えるのを防ぐ） */
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", "Shippori Mincho", serif !important;
+  font-family: var(--home-mincho) !important;
 }
 @media only screen and (max-width: 800px) {
   .txt .next-event__label,
@@ -822,7 +826,7 @@ a.bus-stop:hover {
   line-height: 1.6 !important;
   color: inherit !important;
   /* 英数字も明朝に（Helvetica 太字だけ濃く見えるのを防ぐ） */
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", "Shippori Mincho", serif !important;
+  font-family: var(--home-mincho) !important;
 }
 .txt .schedule-list .schedule-month,
 .txt .schedule-list .schedule-day,
@@ -831,10 +835,106 @@ a.bus-stop:hover {
   font-family: inherit !important;
   font-weight: 700 !important;
 }
-.txt h3.schedule-heading,
+.txt .schedule-heading,
 .schedule-heading {
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", "Shippori Mincho", serif !important;
+  margin: 0 0 0.55em !important;
+  text-align: center !important;
+  font-family: var(--home-mincho) !important;
+  font-size: 3.2rem !important;
   font-weight: 700 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.06em;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  color: inherit !important;
+}
+.txt .schedule-heading--en,
+.schedule-heading--en {
+  margin-top: 1.35em !important;
+}
+@media only screen and (max-width: 800px) {
+  .txt .schedule-heading,
+  .schedule-heading {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* HOME 場所・紹介・問い合わせ */
+.txt .home-venue,
+.home-venue,
+.txt .home-about,
+.home-about,
+.txt .home-contact,
+.home-contact {
+  font-family: var(--home-mincho) !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+}
+.txt .home-venue__lang,
+.home-venue__lang,
+.txt .home-about__lang,
+.home-about__lang,
+.txt .home-contact__lang,
+.home-contact__lang {
+  margin: 0 0 1.15em !important;
+  padding: 0 0 1.05em !important;
+  border-bottom: 1px solid #ecd6d4;
+  font-size: 1.7rem !important;
+  font-weight: 500 !important;
+  line-height: 1.75 !important;
+  text-align: center !important;
+}
+.txt .home-venue__lang:last-child,
+.home-venue__lang:last-child,
+.txt .home-about__lang:last-child,
+.home-about__lang:last-child,
+.txt .home-contact__lang:last-child,
+.home-contact__lang:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none;
+}
+.txt .home-venue__lang p,
+.home-venue__lang p,
+.txt .home-about__lang p,
+.home-about__lang p,
+.txt .home-contact__lang p,
+.home-contact__lang p {
+  margin: 0 0 0.35em !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  text-align: inherit !important;
+  color: inherit !important;
+}
+.txt .home-venue__lang p:last-child,
+.home-venue__lang p:last-child,
+.txt .home-about__lang p:last-child,
+.home-about__lang p:last-child,
+.txt .home-contact__lang p:last-child,
+.home-contact__lang p:last-child {
+  margin-bottom: 0 !important;
+}
+.txt .home-about__lang,
+.home-about__lang {
+  text-align: left !important;
+}
+.txt .home-contact__title,
+.home-contact__title {
+  margin-bottom: 0.55em !important;
+  font-size: 1.15em !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+}
+@media only screen and (max-width: 800px) {
+  .txt .home-venue__lang,
+  .home-venue__lang,
+  .txt .home-about__lang,
+  .home-about__lang,
+  .txt .home-contact__lang,
+  .home-contact__lang {
+    font-size: 1.5rem !important;
+  }
 }
 .txt .schedule-row,
 .schedule-row {
@@ -947,7 +1047,7 @@ a.bus-stop:hover {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-family: var(--home-mincho);
   font-size: calc((100vw - 2rem) / 10.6);
   font-weight: 700;
   letter-spacing: 0.1em;
