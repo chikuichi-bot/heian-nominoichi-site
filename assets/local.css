@@ -821,6 +821,20 @@ a.bus-stop:hover {
   font-weight: 700 !important;
   line-height: 1.6 !important;
   color: inherit !important;
+  /* 英数字も明朝に（Helvetica 太字だけ濃く見えるのを防ぐ） */
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", "Shippori Mincho", serif !important;
+}
+.txt .schedule-list .schedule-month,
+.txt .schedule-list .schedule-day,
+.txt .schedule-list .schedule-wday,
+.txt .schedule-list .schedule-year-band {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+}
+.txt h3.schedule-heading,
+.schedule-heading {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", "Shippori Mincho", serif !important;
+  font-weight: 700 !important;
 }
 .txt .schedule-row,
 .schedule-row {
