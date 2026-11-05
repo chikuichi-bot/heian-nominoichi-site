@@ -1167,7 +1167,7 @@ a.bus-stop:hover {
   width: 100%;
   max-width: 100%;
   font-family: var(--home-mincho);
-  font-size: calc((100vw - 2rem) / 10.6);
+  font-size: calc((100vw - 2rem) / 12);
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.15;
@@ -1180,7 +1180,7 @@ a.bus-stop:hover {
   width: 100%;
   max-width: 100%;
   margin-top: 0.28em;
-  font-size: calc((100vw - 2rem) / 13.6);
+  font-size: calc((100vw - 2rem) / 15.4);
   font-weight: 700;
   letter-spacing: 0.025em;
   line-height: 1.2;
@@ -1189,10 +1189,10 @@ a.bus-stop:hover {
 }
 @media only screen and (min-width: 801px) {
   .keyvisual__title-ja {
-    font-size: calc((min(100vw, 840px) - 3.5rem) / 10.6);
+    font-size: calc((min(100vw, 840px) - 3.5rem) / 12);
   }
   .keyvisual__title-en {
-    font-size: calc((min(100vw, 840px) - 3.5rem) / 13.6);
+    font-size: calc((min(100vw, 840px) - 3.5rem) / 15.4);
   }
 }
 /* 電車の駅・車の地名など、見るべき名前 */
