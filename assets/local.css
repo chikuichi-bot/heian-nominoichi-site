@@ -325,24 +325,63 @@ html, body { min-height: 100%; }
   line-height: 1.7;
 }
 .access-toc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   margin: 0 0 1.8em;
   padding: 0;
-}
-.access-toc a {
-  display: inline-block;
-  padding: 0.75em 1.15em;
   border: 2px solid #a33428;
   background: #fff;
-  text-decoration: none !important;
-  font-size: 1.6rem;
-  line-height: 1.3;
-  font-weight: 700;
+  overflow: hidden;
+  box-sizing: border-box;
 }
-.access-toc a:hover {
-  background: #f5eae9;
+.access-toc__item,
+.access-toc a.access-toc__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  box-sizing: border-box;
+  min-height: 5.6em;
+  padding: 0.85em 0.45em;
+  border: none;
+  border-right: 1px solid #a33428;
+  background: #fff;
+  color: #a33428 !important;
+  text-decoration: none !important;
+  text-align: center;
+  font-family: var(--home-mincho);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.access-toc__item:last-child,
+.access-toc a.access-toc__item:last-child {
+  border-right: none;
+}
+.access-toc__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  color: inherit;
+}
+.access-toc__icon svg {
+  display: block;
+  width: 1.55em;
+  height: 1.55em;
+}
+.access-toc__label {
+  display: block;
+}
+.access-toc__item:hover,
+.access-toc a.access-toc__item:hover {
+  background: #a33428;
+  color: #fff !important;
 }
 /* バス／電車／車／駐車場をそれぞれ独立した枠に分ける */
 /* 左右は padding で確保（子の width:100% + margin だと右枠が欠ける） */
@@ -1713,13 +1752,25 @@ a.bus-stop:hover {
     margin-right: 0;
   }
   .access-toc {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
   }
-  .access-toc a {
-    font-size: 1.3rem;
-    padding: 0.55em 0.75em;
+  .access-toc__item,
+  .access-toc a.access-toc__item {
+    min-height: 5.2em;
+    padding: 0.75em 0.35em !important;
+    font-size: 1.3rem !important;
+    border-right: 1px solid #a33428 !important;
+    border-bottom: 1px solid #a33428 !important;
+  }
+  .access-toc__item:nth-child(2n),
+  .access-toc a.access-toc__item:nth-child(2n) {
+    border-right: none !important;
+  }
+  .access-toc__item:nth-child(n+3),
+  .access-toc a.access-toc__item:nth-child(n+3) {
+    border-bottom: none !important;
   }
   .bus-explain {
     padding: 0.85em 0.9em;
