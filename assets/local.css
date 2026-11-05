@@ -1578,11 +1578,12 @@ a.bus-stop:hover {
 .m-route-card__option + .m-route-card__row {
   margin-top: 1em;
 }
-.m-route-card__option .m-route-card__row {
+.m-route-card__option .m-route-card__row,
+.m-route-card__option .m-route-card__bus {
   display: grid;
-  grid-template-columns: 4.8em minmax(0, 1fr);
+  grid-template-columns: var(--route-label, 5.2em) minmax(0, 1fr);
   column-gap: 0.75em;
-  align-items: baseline;
+  align-items: center;
   margin: 0.5em 0;
 }
 .m-route-card__option .m-route-card__row:first-child {
@@ -1593,19 +1594,15 @@ a.bus-stop:hover {
 }
 .m-route-card__option .m-route-card__label {
   min-width: 0;
+  width: auto;
   margin-right: 0;
 }
-.m-route-card__option .m-route-card__bus {
+.m-route-card__option .m-route-card__vals {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 0.45em;
-  row-gap: 0.35em;
-  margin: 0.5em 0;
-}
-.m-route-card__option .m-route-card__bus .m-route-card__label {
-  flex: 0 0 4.8em;
-  width: 4.8em;
+  gap: 0.35em;
+  min-width: 0;
 }
 /* 電車ルート図解（縦の路線図） */
 .train-flow {
