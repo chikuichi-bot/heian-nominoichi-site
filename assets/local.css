@@ -813,14 +813,6 @@ html, body { min-height: 100%; }
   padding-right: 0.55em;
   font-size: 1.35rem;
 }
-.bus-stand__note {
-  display: inline-block;
-  font-size: 1.45rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: #7a2a22;
-  letter-spacing: 0.02em;
-}
 .bus-num {
   background: #a33428;
   color: #fff;
