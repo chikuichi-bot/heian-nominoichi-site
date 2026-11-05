@@ -350,6 +350,13 @@ html, body { min-height: 100%; }
   font-size: 1.7rem;
   line-height: 1.7;
 }
+.access-panel > .access-hint {
+  padding: 0.75em 0.9em;
+  background: var(--frame-head, #f3e5e3);
+  border: 1px solid var(--frame-soft, #e5c9c4);
+  border-radius: 2px;
+  color: #5c1c17;
+}
 .access-toc {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -805,6 +812,14 @@ html, body { min-height: 100%; }
   padding-left: 0.55em;
   padding-right: 0.55em;
   font-size: 1.35rem;
+}
+.bus-stand__note {
+  display: inline-block;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #7a2a22;
+  letter-spacing: 0.02em;
 }
 .bus-num {
   background: #a33428;
