@@ -1081,7 +1081,7 @@ a.bus-stop:hover {
   }
   .txt .home-contact__title,
   .home-contact__title {
-    font-size: 2.6rem !important;
+    font-size: 2.2rem !important;
   }
   .txt .home-contact__rows,
   .home-contact__rows {
@@ -1091,8 +1091,8 @@ a.bus-stop:hover {
   .txt .home-contact__row,
   .home-contact__row,
   .txt .home-contact div.home-contact__row {
-    grid-template-columns: 4.8em 1fr;
-    column-gap: 0.55em;
+    grid-template-columns: 4.2em 1fr;
+    column-gap: 0.5em;
   }
   .txt .home-contact__row,
   .home-contact__row,
@@ -1105,15 +1105,15 @@ a.bus-stop:hover {
   .txt .home-contact__val a,
   .txt .home-contact a.u-lnk-clr,
   .home-contact__val a {
-    font-size: 2.6rem !important;
+    font-size: 2.15rem !important;
   }
   .txt .home-contact__note,
   .home-contact__note {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
   }
   .txt .home-contact__org,
   .home-contact__org {
-    font-size: 1.9rem !important;
+    font-size: 1.7rem !important;
   }
 }
 .txt .schedule-row,
