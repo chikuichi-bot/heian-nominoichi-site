@@ -752,6 +752,41 @@ a.bus-stop:hover {
 .access-table .bus-stop {
   font-size: 1.65rem;
 }
+/* HOME 開催予定日：月の字を縦揃え */
+.schedule-year {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+.schedule-list {
+  display: table;
+  margin: 0 auto 0.95em;
+  border-collapse: collapse;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: inherit;
+}
+.schedule-row {
+  display: table-row;
+}
+.schedule-month {
+  display: table-cell;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 0.2em;
+}
+.schedule-detail {
+  display: table-cell;
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 0.15em;
+}
+@media only screen and (max-width: 800px) {
+  .schedule-list {
+    font-size: 2.2rem;
+  }
+}
+
 /* HOME キービジュアル：英題を画面幅いっぱい · 和題も同じ幅に合わせる */
 .keyvisual__text {
   box-sizing: border-box;
