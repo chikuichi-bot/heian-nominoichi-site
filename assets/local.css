@@ -777,6 +777,7 @@ a.bus-stop:hover {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
+  font-family: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
   font-size: calc((100vw - 2rem) / 10.6);
   font-weight: 700;
   letter-spacing: 0.1em;
