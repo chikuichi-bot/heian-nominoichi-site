@@ -799,10 +799,51 @@ a.bus-stop:hover {
   padding-left: 0.2em;
   letter-spacing: 0.01em;
 }
+/* 雨天注記：日時リストと混ぜない注記ボックス */
+.txt .schedule-note,
+.schedule-note {
+  display: block !important;
+  box-sizing: border-box;
+  max-width: 36em;
+  margin: 0.35em auto 1.35em !important;
+  padding: 0.85em 1.05em !important;
+  background: #faf6f4 !important;
+  border: 1px solid #e2cfcb !important;
+  border-left: 4px solid #a33428 !important;
+  text-align: left !important;
+  font-size: 1.55rem !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: #7a2a22 !important;
+}
+.txt .schedule-note__label,
+.schedule-note__label {
+  margin: 0 0 0.35em !important;
+  font-size: 1.05em !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  color: #a33428 !important;
+  line-height: 1.35 !important;
+}
+.txt .schedule-note__body,
+.schedule-note__body {
+  margin: 0 !important;
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: inherit !important;
+}
 @media only screen and (max-width: 800px) {
   .txt .schedule-list,
   .schedule-list {
     font-size: 2.2rem !important;
+  }
+  .txt .schedule-note,
+  .schedule-note {
+    font-size: 1.4rem !important;
+    max-width: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
