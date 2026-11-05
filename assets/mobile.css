@@ -34,7 +34,7 @@
   .block-txt.txt {
     box-sizing: border-box;
     max-width: 100%;
-    padding: 1.15rem 1rem !important;
+    padding: 1.25rem 1.1rem !important;
     border-width: 2px !important;
   }
 
@@ -177,17 +177,17 @@
     border-radius: 4px;
   }
   .m-route-card--emphasis {
-    --route-inset: 0.9em;
+    --route-inset: var(--inset-s, 0.9em);
     border-width: 2px !important;
-    border-color: #a33428 !important;
-    background: #fff9f7 !important;
+    border-color: var(--frame, #a33428) !important;
+    background: var(--frame-tint, #fff9f7) !important;
   }
   .m-route-card__head {
     display: block;
     margin: 0 !important;
     padding: 0.75em var(--route-inset, 0.9em) !important;
-    border-bottom: 2px solid #a33428;
-    background: #f3e5e3;
+    border-bottom: 2px solid var(--frame, #a33428);
+    background: var(--frame-head, #f3e5e3);
     font-size: 2.6rem !important;
     font-weight: 800 !important;
     line-height: 1.3 !important;
@@ -229,9 +229,8 @@
     margin: 0 var(--route-inset, 0.9em);
     padding: 0.85em 0.9em;
     background: #fff;
-    border: 1px solid #e5c9c4;
+    border: 1px solid var(--frame-soft, #e5c9c4);
     border-radius: 2px;
-    border-bottom: 1px solid #e5c9c4;
   }
   .m-route-card__head + .m-route-card__option,
   .m-route-card__or + .m-route-card__option {
@@ -266,7 +265,7 @@
     margin: 0.75em 0 0;
     padding: 0.85em 0.9em;
     background: #fff;
-    border: 1px solid #e5c9c4;
+    border: 1px solid var(--frame-soft, #e5c9c4);
     border-radius: 2px;
   }
 
@@ -277,10 +276,10 @@
   }
   .m-park-card {
     margin: 0;
-    padding: 0.9em 0.85em;
+    padding: 1em 1.05em;
     background: #fff;
-    border: 2px solid #ecd6d4;
-    border-radius: 4px;
+    border: 1px solid var(--frame-soft, #e5c9c4);
+    border-radius: 2px;
   }
   .m-park-card h3 {
     margin: 0 0 0.45em !important;

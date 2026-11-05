@@ -40,6 +40,13 @@ blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
 /* HOME 見出し・日時用：和英の太さを揃える明朝スタック */
 :root {
   --home-mincho: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", serif;
+  /* 全ページ共通の枠・余白尺 */
+  --frame: #a33428;
+  --frame-soft: #e5c9c4;
+  --frame-tint: #fff9f7;
+  --frame-head: #f3e5e3;
+  --inset: 1.2em;
+  --inset-s: 0.9em;
 }
 
 /* Ownd rem base (same as user.min.css) */
@@ -164,12 +171,31 @@ html, body { min-height: 100%; }
   }
 }
 
-/* Tighten only empty-looking gaps; sizes come from Ownd .txt h1/h2/h3 */
+/* 全ページ：見出し下に息をつく余白（枠線に文字が張り付かない） */
 .page__main .block-txt h1,
 .page__main .block-txt h2,
 .page__main .block-txt h3 {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+  margin-top: 0.55em;
+  margin-bottom: 0.85em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--frame-soft);
+  line-height: 1.4;
+}
+.page__main .block-txt h1:first-child,
+.page__main .block-txt h2:first-child,
+.page__main .block-txt h3:first-child {
+  margin-top: 0;
+}
+/* HOME 開催予定は従来の下線スタイルを優先 */
+.page__main .block-txt h2.schedule-heading,
+.page__main .block-txt .schedule-heading {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* access-panel 内の帯見出しは下線不要（帯自体が区切り） */
+.access-panel > .access-heading {
+  border-bottom: none !important;
+  padding-bottom: 0.75em !important;
 }
 
 /* 搬入搬出ガイド: 読みやすさ優先で一段大きく */
@@ -280,11 +306,11 @@ html, body { min-height: 100%; }
 .txt .access-lead {
   display: block !important;
   box-sizing: border-box;
-  margin: 0 0 1.05em !important;
-  padding: 0.85em 1em 0.95em !important;
-  background: #f5eae9 !important;
-  border: 3px solid #a33428 !important;
-  box-shadow: 0 0 0 1px rgba(163, 52, 40, 0.12);
+  margin: 0 0 1.25em !important;
+  padding: 1em 1.15em 1.1em !important;
+  background: var(--frame-head) !important;
+  border: 2px solid var(--frame) !important;
+  box-shadow: none;
   text-align: center !important;
   color: #a33428 !important;
   font-family: var(--home-mincho) !important;
@@ -383,30 +409,30 @@ html, body { min-height: 100%; }
   background: #a33428;
   color: #fff !important;
 }
-/* バス／電車／車／駐車場をそれぞれ独立した枠に分ける */
-/* 左右は padding で確保（子の width:100% + margin だと右枠が欠ける） */
+/* バス／電車／車／駐車場：見出し帯＋同尺インセット（ルートカードと同じ思想） */
 .access-panel {
+  --panel-inset: var(--inset);
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
   margin: 0 0 1.6em;
-  padding: 0 1.1em 1.25em;
+  padding: 0 var(--panel-inset) var(--panel-inset);
   background: #fff;
-  border: 3px solid #a33428;
+  border: 2px solid var(--frame);
   overflow: visible;
 }
 .access-panel--focus {
-  border-color: #a33428;
+  border-color: var(--frame);
   background: #fff;
 }
 .access-panel:last-of-type {
   margin-bottom: 0;
 }
 .access-panel > .access-heading {
-  margin: 0 -1.1em 1em !important;
-  padding: 0.7em 1.1em !important;
+  margin: 0 calc(-1 * var(--panel-inset)) 0 !important;
+  padding: 0.75em var(--panel-inset) !important;
   border-bottom: none !important;
-  background: #a33428;
+  background: var(--frame);
   color: #fff !important;
   font-size: 2rem !important;
   line-height: 1.35 !important;
@@ -419,15 +445,15 @@ html, body { min-height: 100%; }
 .access-panel > .access-note {
   margin-left: 0;
   margin-right: 0;
+  margin-top: 1.15em;
+  margin-bottom: 0;
   max-width: 100%;
   box-sizing: border-box;
 }
-.access-panel > .access-hint {
-  margin-top: 0.15em;
-}
-.access-panel > .m-route-list,
-.access-panel > .m-park-list {
-  margin-top: 0.15em;
+.access-panel > .access-hint + .m-route-list,
+.access-panel > .access-hint + .m-park-list,
+.access-panel > .access-hint + .access-note {
+  margin-top: 0.85em;
 }
 .access-panel > .access-foot {
   margin-bottom: 0;
@@ -448,10 +474,10 @@ html, body { min-height: 100%; }
 }
 .m-park-list.apply-park-list .m-park-card {
   margin: 0;
-  padding: 0.9em 0.85em;
+  padding: 1.05em 1.1em;
   background: #fff;
-  border: 2px solid #ecd6d4;
-  border-radius: 4px;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -487,9 +513,9 @@ html, body { min-height: 100%; }
   height: auto;
 }
 .access-heading {
-  margin: 0 0 0.9em !important;
-  padding-bottom: 0.4em;
-  border-bottom: 2px solid #ecd6d4;
+  margin: 0 0 1em !important;
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--frame-soft);
   font-size: 2.2rem !important;
   font-weight: 700;
   text-decoration: none !important;
@@ -501,15 +527,16 @@ html, body { min-height: 100%; }
   max-width: 100%;
   margin: 0 0 1.2em;
   padding: 1.1em 1.2em;
-  background: #f5eae9;
-  border: 2px solid #ecd6d4;
+  background: var(--frame-head);
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   font-size: 1.75rem;
   line-height: 1.8;
 }
 .access-note--alert {
   background: #fff5f3;
-  border: 3px solid #a83333;
-  box-shadow: inset 0 0 0 1px rgba(168, 51, 51, 0.12);
+  border: 2px solid #a83333;
+  box-shadow: none;
 }
 /* みやこめっせカード内だけに置く注意 */
 .access-note--inline {
@@ -528,10 +555,10 @@ html, body { min-height: 100%; }
 }
 .m-park-card {
   margin: 0;
-  padding: 1em 1.05em;
-  background: #fffdfb;
-  border: 2px solid #e8d0cd;
-  border-radius: 4px;
+  padding: 1.05em 1.1em;
+  background: #fff;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -593,9 +620,11 @@ html, body { min-height: 100%; }
 }
 .apply-notice__item {
   margin: 0 0 1.15em !important;
-  padding: 0.85em 1em;
-  background: #fff8f6;
-  border-left: 5px solid #a33428;
+  padding: 1em 1.15em;
+  background: var(--frame-tint);
+  border: 1px solid var(--frame-soft);
+  border-left: 4px solid var(--frame);
+  border-radius: 2px;
   font-size: 2.25rem !important;
   line-height: 1.75 !important;
 }
@@ -618,11 +647,11 @@ html, body { min-height: 100%; }
   overflow: visible;
 }
 #apply-parking.access-panel > .access-heading {
-  margin: 0 0 0.9em !important;
-  padding: 0 0 0.4em !important;
+  margin: 0 0 1em !important;
+  padding: 0 0 0.45em !important;
   background: transparent;
   color: inherit !important;
-  border-bottom: 2px solid #ecd6d4 !important;
+  border-bottom: 1px solid var(--frame-soft) !important;
   font-size: 2.2rem !important;
 }
 #apply-parking.access-panel > .access-hint,
@@ -1158,11 +1187,12 @@ a.bus-stop:hover {
   display: block !important;
   box-sizing: border-box;
   max-width: 36em;
-  margin: 0.35em auto 1.35em !important;
-  padding: 0.85em 1.05em !important;
-  background: #faf6f4 !important;
-  border: 1px solid #e2cfcb !important;
-  border-left: 4px solid #a33428 !important;
+  margin: 0.55em auto 1.35em !important;
+  padding: 1em 1.15em !important;
+  background: var(--frame-head) !important;
+  border: 1px solid var(--frame-soft) !important;
+  border-left: 4px solid var(--frame) !important;
+  border-radius: 2px;
   text-align: left !important;
   font-size: 1.55rem !important;
   font-weight: 400 !important;
@@ -1266,9 +1296,10 @@ a.bus-stop:hover {
   display: grid;
   gap: 0.65em;
   margin: 0 0 1.2em;
-  padding: 1em 1.1em;
+  padding: 1.05em 1.15em;
   background: #fff;
-  border: 2px solid #ecd6d4;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
 }
 .bus-explain__item {
   display: flex;
@@ -1378,20 +1409,20 @@ a.bus-stop:hover {
 }
 .m-route-card {
   margin: 0;
-  padding: 1.1em 1.1em 1.15em;
-  background: #fffdfb;
-  border: 2px solid #e8d0cd;
-  border-radius: 4px;
+  padding: 1.1em 1.15em 1.15em;
+  background: #fff;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
 }
 /* バス・電車・車：外枠1つ＋内側は同尺の余白で整える */
 .m-route-card--emphasis {
-  --route-inset: 1.2em;
+  --route-inset: var(--inset);
   padding: 0;
-  background: #fff9f7;
-  border: 2px solid #a33428;
+  background: var(--frame-tint);
+  border: 2px solid var(--frame);
   box-shadow: none;
   overflow: hidden;
 }
@@ -1399,8 +1430,8 @@ a.bus-stop:hover {
   display: block;
   margin: 0 !important;
   padding: 0.85em var(--route-inset) !important;
-  border-bottom: 2px solid #a33428;
-  background: #f3e5e3;
+  border-bottom: 2px solid var(--frame);
+  background: var(--frame-head);
   font-size: 3.2rem !important;
   font-weight: 800 !important;
   line-height: 1.3 !important;
@@ -1412,7 +1443,7 @@ a.bus-stop:hover {
   margin: 1em var(--route-inset) 1.15em;
   padding: 0.7em 0.95em;
   background: #fff;
-  border: 1px solid #e5c9c4;
+  border: 1px solid var(--frame-soft);
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -1422,10 +1453,11 @@ a.bus-stop:hover {
   padding-bottom: 0.7em;
 }
 .m-route-card__foot {
-  margin: 0.55em 1.05em 0 !important;
-  padding: 0.55em 0.75em;
+  margin: 1em var(--route-inset, var(--inset)) 1.15em !important;
+  padding: 0.7em 0.95em;
   background: #fff;
-  border: 2px solid #ecd6d4;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   font-size: 1.45rem !important;
   line-height: 1.5;
   color: #7a2a22;
@@ -1461,10 +1493,11 @@ a.bus-stop:hover {
   vertical-align: middle;
 }
 .m-route-card__note {
-  margin: 0.75em 1.05em 0.55em !important;
-  padding: 0.55em 0.75em;
+  margin: 1em var(--route-inset, var(--inset)) 0 !important;
+  padding: 0.7em 0.95em;
   background: #fff;
-  border: 2px solid #ecd6d4;
+  border: 1px solid var(--frame-soft);
+  border-radius: 2px;
   font-size: 1.5rem !important;
   line-height: 1.5;
   color: #5c1c17;
@@ -1522,13 +1555,13 @@ a.bus-stop:hover {
 .m-route-card__or::after {
   content: "";
   height: 1px;
-  background: #e5c9c4;
+  background: var(--frame-soft);
 }
 .m-route-card__option {
-  margin: 0 var(--route-inset, 1.2em);
+  margin: 0 var(--route-inset, var(--inset));
   padding: 1em 1.05em;
   background: #fff;
-  border: 1px solid #e5c9c4;
+  border: 1px solid var(--frame-soft);
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -1911,15 +1944,16 @@ a.bus-stop:hover {
     line-height: 1.4 !important;
   }
   .access-panel {
+    --panel-inset: var(--inset-s);
     margin-bottom: 1.15em;
-    padding: 0 0.85em 1em;
+    padding: 0 var(--panel-inset) var(--panel-inset);
     border-width: 2px;
   }
   .access-panel > .access-heading {
     font-size: 1.75rem !important;
-    margin-left: -0.85em !important;
-    margin-right: -0.85em !important;
-    padding: 0.6em 0.85em !important;
+    margin-left: calc(-1 * var(--panel-inset)) !important;
+    margin-right: calc(-1 * var(--panel-inset)) !important;
+    padding: 0.65em var(--panel-inset) !important;
   }
   .access-panel > .access-hint,
   .access-panel > .access-foot,
@@ -1929,6 +1963,7 @@ a.bus-stop:hover {
   .access-panel > .access-note {
     margin-left: 0;
     margin-right: 0;
+    margin-top: 1em;
   }
   .access-toc {
     display: grid !important;
