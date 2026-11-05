@@ -975,6 +975,12 @@ a.bus-stop:hover {
   line-height: 1.75 !important;
   text-align: center !important;
 }
+.txt .home-venue__lang,
+.home-venue__lang,
+.txt .home-about__lang,
+.home-about__lang {
+  font-size: 2rem !important;
+}
 .txt .home-contact__lang,
 .home-contact__lang {
   font-size: 2.4rem !important;
@@ -1109,7 +1115,7 @@ a.bus-stop:hover {
   .home-venue__lang,
   .txt .home-about__lang,
   .home-about__lang {
-    font-size: 1.5rem !important;
+    font-size: 1.75rem !important;
   }
   .txt .home-contact__lang,
   .home-contact__lang {
