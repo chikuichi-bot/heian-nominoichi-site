@@ -53,7 +53,7 @@
     width: 100% !important;
   }
   .keyvisual__title-ja {
-    font-size: calc((100vw - 2rem) / 5.3) !important;
+    font-size: calc((100vw - 2rem) / 10.6) !important;
     letter-spacing: 0.1em !important;
     white-space: nowrap !important;
   }
