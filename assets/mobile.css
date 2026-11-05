@@ -81,22 +81,19 @@
     padding: 0 !important;
   }
   .access-lead {
-    font-size: 2.6rem !important;
-    font-weight: 800 !important;
-    line-height: 1.3 !important;
-    color: #a33428 !important;
-    margin-bottom: 1em;
-    padding: 0.65em 0.85em !important;
-    background: #f5eae9 !important;
-    border: 3px solid #a33428 !important;
-    letter-spacing: 0.03em !important;
-    text-align: left !important;
+    margin-bottom: 1em !important;
+    padding: 0.75em 0.8em 0.85em !important;
+    text-align: center !important;
   }
-  .access-lead__place,
+  .access-lead__label {
+    font-size: 1.35rem !important;
+    letter-spacing: 0.16em !important;
+  }
+  .access-lead__place {
+    font-size: 2.7rem !important;
+  }
   .access-lead__sub {
-    font-size: 1em !important;
-    font-weight: 800 !important;
-    color: #a33428 !important;
+    font-size: 1.5rem !important;
   }
   .access-heading {
     font-size: 1.85rem !important;

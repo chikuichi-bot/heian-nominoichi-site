@@ -275,33 +275,49 @@ html, body { min-height: 100%; }
 .access-guide a:hover {
   color: rgba(163, 52, 40, 0.75);
 }
-/* 「京都駅から」(.m-route-card__head) と同じ見出し表示
-   .txt p { font-size:1.4rem } より強くするため !important */
+/* 会場リード：ラベル / 地名 / 補足の3段（長い一文の改行崩れを防ぐ） */
 .access-guide .access-lead,
-.txt p.access-lead {
+.txt .access-lead {
   display: block !important;
-  margin: 0 0 1.15em !important;
-  padding: 0.75em 1em !important;
+  box-sizing: border-box;
+  margin: 0 0 1.05em !important;
+  padding: 0.85em 1em 0.95em !important;
   background: #f5eae9 !important;
   border: 3px solid #a33428 !important;
   box-shadow: 0 0 0 1px rgba(163, 52, 40, 0.12);
-  font-size: 3.2rem !important;
-  font-weight: 800 !important;
+  text-align: center !important;
+  color: #a33428 !important;
+  font-family: var(--home-mincho) !important;
+}
+.access-guide .access-lead__label,
+.txt .access-lead__label {
+  display: block !important;
+  margin: 0 0 0.2em !important;
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
   line-height: 1.3 !important;
   color: #a33428 !important;
-  letter-spacing: 0.04em !important;
-  text-align: left !important;
-  box-sizing: border-box;
 }
 .access-guide .access-lead__place,
-.access-guide .access-lead__sub,
-.txt p.access-lead .access-lead__place,
-.txt p.access-lead .access-lead__sub {
-  display: inline;
-  font-size: 1em !important;
+.txt .access-lead__place {
+  display: block !important;
+  margin: 0 !important;
+  font-size: 3.2rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em !important;
+  line-height: 1.25 !important;
   color: #a33428 !important;
+}
+.access-guide .access-lead__sub,
+.txt .access-lead__sub {
+  display: block !important;
+  margin: 0.28em 0 0 !important;
+  font-size: 1.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1.35 !important;
+  color: #7a2a22 !important;
 }
 .access-hint {
   margin: 0 0 1em;
@@ -1658,22 +1674,19 @@ a.bus-stop:hover {
     letter-spacing: normal !important;
   }
   .access-lead {
-    font-size: 2.6rem !important;
-    font-weight: 800 !important;
-    line-height: 1.3 !important;
-    color: #a33428 !important;
-    margin-bottom: 1em;
-    padding: 0.65em 0.85em !important;
-    background: #f5eae9 !important;
-    border: 3px solid #a33428 !important;
-    letter-spacing: 0.03em !important;
-    text-align: left !important;
+    margin-bottom: 1em !important;
+    padding: 0.75em 0.8em 0.85em !important;
+    text-align: center !important;
   }
-  .access-lead__place,
+  .access-lead__label {
+    font-size: 1.35rem !important;
+    letter-spacing: 0.16em !important;
+  }
+  .access-lead__place {
+    font-size: 2.7rem !important;
+  }
   .access-lead__sub {
-    font-size: 1em !important;
-    font-weight: 800 !important;
-    color: #a33428 !important;
+    font-size: 1.5rem !important;
   }
   .access-heading {
     font-size: 1.8rem !important;
