@@ -751,38 +751,50 @@ a.bus-stop:hover {
 .access-table .bus-stop {
   font-size: 1.65rem;
 }
-/* HOME 開催予定日：月の字を縦揃え */
+/* HOME 開催予定日：月の字を縦揃え · 英語 h2 と同じ大きさ
+   .txt div { font-size:1.4rem } に負けないよう !important */
 .schedule-year {
   text-align: center;
   margin-bottom: 0.2em;
 }
+.txt .schedule-list,
 .schedule-list {
-  display: table;
-  margin: 0 auto 0.95em;
+  display: table !important;
+  margin: 0 auto 0.95em !important;
   border-collapse: collapse;
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.6;
-  color: inherit;
+  font-size: 3.2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+  color: inherit !important;
 }
+.txt .schedule-row,
 .schedule-row {
-  display: table-row;
+  display: table-row !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
 }
+.txt .schedule-month,
 .schedule-month {
-  display: table-cell;
+  display: table-cell !important;
   text-align: right;
   white-space: nowrap;
   padding-right: 0.2em;
+  font-size: inherit !important;
+  font-weight: inherit !important;
 }
+.txt .schedule-detail,
 .schedule-detail {
-  display: table-cell;
+  display: table-cell !important;
   text-align: left;
   white-space: nowrap;
   padding-left: 0.15em;
+  font-size: inherit !important;
+  font-weight: inherit !important;
 }
 @media only screen and (max-width: 800px) {
+  .txt .schedule-list,
   .schedule-list {
-    font-size: 2.2rem;
+    font-size: 2.2rem !important;
   }
 }
 
