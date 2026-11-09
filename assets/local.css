@@ -59,6 +59,25 @@ html, body { min-height: 100%; }
 .block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
 .btn__item { text-decoration: none; }
 
+/* 出店申し込み CTA — 枠いっぱいに大きく・一目で分かる */
+.btn--apply {
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+.btn__item--apply {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  font-size: 2rem;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  min-height: 4.8rem;
+  padding: 1.35em 1.5em 1.2em;
+  text-align: center;
+}
+
 .common-header__outer {
   position: relative;
   z-index: 40;
