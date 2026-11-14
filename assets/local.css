@@ -650,6 +650,11 @@ html, body { min-height: 100%; }
   letter-spacing: 0.06em;
   line-height: 1.4;
 }
+/* 終了お知らせの下・次受付の直前に置くとき */
+.apply-notice__item + .apply-notice__label {
+  margin-top: 0.25em !important;
+  margin-bottom: 0.65em !important;
+}
 .apply-notice-list {
   margin: 0;
   padding: 0;
