@@ -47,6 +47,8 @@ blockquote { color: rgba(163,52,40, 0.7); border-left-color: #a33428; }
   --frame-head: #f3e5e3;
   --inset: 1.2em;
   --inset-s: 0.9em;
+  /* HOME 英題と同じラテン書体（和文は --home-mincho） */
+  --home-latin: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Ownd rem base (same as user.min.css) */
@@ -908,8 +910,13 @@ a.bus-stop:hover {
   line-height: 1.45 !important;
   letter-spacing: 0.04em;
   color: inherit !important;
-  /* 和英とも同じ書体・太さ（Helvetica太字だけ濃く見えるのを防ぐ） */
+  /* 和文日付は明朝（英日付は --en） */
   font-family: var(--home-mincho) !important;
+}
+.txt .next-event__date--en,
+.next-event__date--en {
+  font-family: var(--home-latin) !important;
+  letter-spacing: 0.02em;
 }
 @media only screen and (max-width: 800px) {
   .txt .next-event__label,
@@ -976,6 +983,18 @@ a.bus-stop:hover {
 .txt .schedule-heading--en,
 .schedule-heading--en {
   margin-top: 1.35em !important;
+  font-family: var(--home-latin) !important;
+  letter-spacing: 0.03em;
+}
+.txt .schedule-list--en,
+.schedule-list--en {
+  font-family: var(--home-latin) !important;
+  letter-spacing: 0.02em;
+}
+/* 英語の雨天注記（英スケジュールの直後） */
+.txt .schedule-list--en ~ .schedule-note,
+.schedule-list--en ~ .schedule-note {
+  font-family: var(--home-latin) !important;
 }
 @media only screen and (max-width: 800px) {
   .txt .schedule-heading,
@@ -994,6 +1013,21 @@ a.bus-stop:hover {
   font-family: var(--home-mincho) !important;
   font-weight: 500 !important;
   color: inherit !important;
+}
+/* 2段目=英語 · 3段目=仏語 → 英題と同じ Helvetica（和・中は明朝のまま） */
+.txt .home-venue__lang:nth-child(2),
+.home-venue__lang:nth-child(2),
+.txt .home-venue__lang:nth-child(3),
+.home-venue__lang:nth-child(3),
+.txt .home-about__lang:nth-child(2),
+.home-about__lang:nth-child(2),
+.txt .home-about__lang:nth-child(3),
+.home-about__lang:nth-child(3),
+.txt .home-contact__lang:nth-child(2),
+.home-contact__lang:nth-child(2),
+.txt .home-contact__lang:nth-child(3),
+.home-contact__lang:nth-child(3) {
+  font-family: var(--home-latin) !important;
 }
 .txt .home-venue__lang,
 .home-venue__lang,
@@ -1318,6 +1352,7 @@ a.bus-stop:hover {
   width: 100%;
   max-width: 100%;
   margin-top: 0.28em;
+  font-family: var(--home-latin);
   font-size: calc((100vw - 2rem) / 15.4);
   font-weight: 700;
   letter-spacing: 0.025em;
