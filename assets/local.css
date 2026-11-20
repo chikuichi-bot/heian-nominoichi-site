@@ -983,18 +983,11 @@ a.bus-stop:hover {
 .txt .schedule-heading--en,
 .schedule-heading--en {
   margin-top: 1.35em !important;
-  font-family: var(--home-latin) !important;
   letter-spacing: 0.03em;
 }
 .txt .schedule-list--en,
 .schedule-list--en {
-  font-family: var(--home-latin) !important;
   letter-spacing: 0.02em;
-}
-/* 英語の雨天注記（英スケジュールの直後） */
-.txt .schedule-list--en ~ .schedule-note,
-.schedule-list--en ~ .schedule-note {
-  font-family: var(--home-latin) !important;
 }
 @media only screen and (max-width: 800px) {
   .txt .schedule-heading,
@@ -1014,19 +1007,24 @@ a.bus-stop:hover {
   font-weight: 500 !important;
   color: inherit !important;
 }
-/* 2段目=英語 · 3段目=仏語 → 英題と同じ Helvetica（和・中は明朝のまま） */
-.txt .home-venue__lang:nth-child(2),
-.home-venue__lang:nth-child(2),
-.txt .home-venue__lang:nth-child(3),
-.home-venue__lang:nth-child(3),
-.txt .home-about__lang:nth-child(2),
-.home-about__lang:nth-child(2),
-.txt .home-about__lang:nth-child(3),
-.home-about__lang:nth-child(3),
-.txt .home-contact__lang:nth-child(2),
-.home-contact__lang:nth-child(2),
-.txt .home-contact__lang:nth-child(3),
-.home-contact__lang:nth-child(3) {
+
+/* HOME 第三案: 和・中 = 明朝 / 英・仏 = Helvetica（英題と統一）
+   キービジュアルは .home-page の外 → .keyvisual__title-* でも指定 */
+.home-page .home-lang--ja,
+.home-page .home-lang--zh,
+.home-page .next-event__label,
+.home-page .next-event__date:not(.next-event__date--en),
+.home-page .schedule-heading:not(.schedule-heading--en),
+.home-page .schedule-list:not(.schedule-list--en),
+.keyvisual__title-ja {
+  font-family: var(--home-mincho) !important;
+}
+.home-page .home-lang--en,
+.home-page .home-lang--fr,
+.home-page .next-event__date--en,
+.home-page .schedule-heading--en,
+.home-page .schedule-list--en,
+.keyvisual__title-en {
   font-family: var(--home-latin) !important;
 }
 .txt .home-venue__lang,
