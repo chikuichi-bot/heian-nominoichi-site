@@ -58,6 +58,25 @@ html, body { min-height: 100%; }
 .page__outer, .page__inner { min-height: 100vh; }
 .common-header__nav { flex-wrap: wrap; }
 .common-header-nav__item a { white-space: nowrap; }
+
+/* 来場者向け（〜会場マップ）｜出店者向け（規約〜）の区切り */
+.common-header-nav__item--visitor-end {
+  position: relative;
+  margin-right: 0.35em !important;
+  padding-right: 0.95em !important;
+}
+.common-header-nav__item--visitor-end::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1.5px;
+  height: 1.4em;
+  background: #ffffff;
+  opacity: 0.95;
+  pointer-events: none;
+}
 .block-txt img, .img img, .img__item--fit img { max-width: 100%; height: auto; }
 .btn__item { text-decoration: none; }
 
@@ -186,6 +205,15 @@ html, body { min-height: 100%; }
   }
   .common-header__nav .common-header-nav__item:last-child {
     border-bottom: none;
+  }
+  /* スマホ：縦並びなので会場マップの下を白い区切り線に */
+  .common-header__nav .common-header-nav__item--visitor-end {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9) !important;
+  }
+  .common-header__nav .common-header-nav__item--visitor-end::after {
+    display: none;
   }
   .common-header-nav__item > a,
   .common-header-nav__item a {
